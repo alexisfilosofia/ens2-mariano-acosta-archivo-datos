@@ -110,11 +110,15 @@ a {
   justify-content: center;
 }
 
-.logo-placeholder {
+.logo-placeholder,
+.institutional-logo {
   width: 240px;
   aspect-ratio: 1;
   border: 1px solid rgba(246, 240, 228, 0.38);
-  border-radius: 50%;
+  border-radius: 28px;
+}
+
+.logo-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,6 +128,16 @@ a {
   text-align: center;
   background: rgba(255, 253, 248, 0.06);
   box-shadow: inset 0 0 0 10px rgba(255, 253, 248, 0.04);
+}
+
+.institutional-logo {
+  height: auto;
+  object-fit: contain;
+  padding: 20px;
+  background: rgba(255, 253, 248, 0.96);
+  box-shadow:
+    0 24px 72px rgba(0, 0, 0, 0.26),
+    0 0 0 10px rgba(255, 253, 248, 0.06);
 }
 
 .logo-placeholder span,
@@ -411,6 +425,20 @@ code {
   overflow: hidden;
 }
 
+.visual-image {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  padding: 18px;
+  background: #f8f5ee;
+  border-bottom: 1px solid var(--line);
+}
+
+.visual-image-tall {
+  height: 420px;
+}
+
 .visual-placeholder::before,
 .visual-placeholder::after {
   content: "";
@@ -569,7 +597,8 @@ code {
     justify-content: flex-start;
   }
 
-  .logo-placeholder {
+  .logo-placeholder,
+  .institutional-logo {
     width: 190px;
   }
 
@@ -618,6 +647,15 @@ code {
 
   .visual-placeholder {
     min-height: 210px;
+  }
+
+  .visual-image {
+    height: 230px;
+    padding: 12px;
+  }
+
+  .visual-image-tall {
+    height: 340px;
   }
 
   .site-footer {

@@ -8,9 +8,19 @@ La página presenta una primera instancia de trabajo sobre el Libro Registro de 
 
 - Página principal: `index.html`
 - Estilos: `styles.css`
-- Espacio preparado para logo institucional: `assets/logo-mariano-acosta.png`
-- Espacio preparado para gráficos: `assets/graficos/`
-- Espacio preparado para mapas: `assets/mapas/`
+- Logo institucional: `assets/logo-mariano-acosta.png`
+- Gráficos agregados: `assets/graficos/`
+- Mapa de calor estático agregado: `assets/mapas/`
+
+## Assets incorporados
+
+- `assets/logo-mariano-acosta.png`: imagen institucional provista para la página.
+- `assets/graficos/`: gráficos agregados y publicables reutilizados desde materiales sanitizados del proyecto geoespacial.
+- `assets/mapas/mapa-calor-densidad-espacial.png`: mapa de calor estático incorporado como visualización agregada.
+
+## Assets revisados y no incorporados
+
+Se revisaron mapas HTML interactivos disponibles en repositorios locales relacionados. Los mapas con puntos, popups, nombres de estudiantes, profesiones de tutores o domicilios individualizados no se incorporan a esta página pública. Cualquier mapa interactivo con coordenadas fila por fila requiere una revisión ética y una versión agregada o anonimizada antes de su publicación.
 
 ## Privacidad y patrimonio
 

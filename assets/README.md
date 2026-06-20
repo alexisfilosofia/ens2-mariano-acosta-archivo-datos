@@ -2,15 +2,15 @@
 
 Esta carpeta queda preparada para incorporar recursos institucionales y visualizaciones futuras.
 
-## Logo
+## Logo institucional
 
-Cuando exista una versión pública y verificada del logo institucional, colocarla como:
+La página utiliza la imagen institucional provista en:
 
 ```text
 assets/logo-mariano-acosta.png
 ```
 
-Hasta entonces, la página utiliza un placeholder textual sobrio.
+No reemplazarla por imágenes externas ni por recreaciones no verificadas.
 
 ## Visualizaciones
 
@@ -21,4 +21,4 @@ assets/graficos/
 assets/mapas/
 ```
 
-No incluir archivos con datos personales, nombres individualizados, documentos de identidad, domicilios exactos individualizados ni documentos fuente sensibles.
+No incluir archivos con datos personales, nombres individualizados, documentos de identidad, domicilios exactos individualizados ni documentos fuente sensibles. Los mapas interactivos con puntos o popups individualizables requieren revisión ética antes de publicarse.
