@@ -435,8 +435,22 @@ code {
   border-bottom: 1px solid var(--line);
 }
 
+.visual-image-secondary {
+  height: 210px;
+  border-top: 1px solid var(--line);
+}
+
 .visual-image-tall {
   height: 420px;
+}
+
+.map-frame {
+  display: block;
+  width: 100%;
+  height: 390px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-soft);
 }
 
 .visual-placeholder::before,
@@ -654,8 +668,16 @@ code {
     padding: 12px;
   }
 
+  .visual-image-secondary {
+    height: 190px;
+  }
+
   .visual-image-tall {
     height: 340px;
+  }
+
+  .map-frame {
+    height: 320px;
   }
 
   .site-footer {
