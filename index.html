@@ -21,6 +21,7 @@
         <a href="#expansion">Expansión</a>
         <a href="#etapa">Primera etapa</a>
         <a href="#visualizaciones">Visualizaciones</a>
+        <a href="#mapas">Mapas</a>
         <a href="#criterios">Criterios</a>
       </div>
     </nav>
@@ -236,10 +237,11 @@
     <section class="section alt-section" id="visualizaciones">
       <div class="section-heading">
         <p class="eyebrow">Lecturas visuales</p>
-        <h2>Visualizaciones</h2>
+        <h2>Visualizaciones estadísticas</h2>
         <p>
-          Esta grilla incorpora imágenes agregadas y publicables cuando están disponibles. Donde todavía no se
-          publica una visualización segura, se conserva un marcador sobrio para futuras etapas.
+          Esta grilla reúne gráficos agregados y publicables sobre edad, año de inscripción, curso y composición
+          de la matrícula. Donde todavía no se publica una visualización segura, se conserva un marcador sobrio
+          para futuras etapas.
         </p>
       </div>
 
@@ -294,30 +296,73 @@
           <h3>Gráfico 6: Participación de cada curso en la matrícula total de cada año</h3>
           <p>Permite analizar el peso relativo de cada curso dentro de la matrícula total de cada año.</p>
         </article>
-        <article class="visual-card">
-          <iframe
-            class="map-frame"
-            src="assets/mapas/mapa-domicilios-publico.html"
-            title="Mapa público agregado de domicilios estudiantiles"
-            loading="lazy"
-          ></iframe>
-          <h3>Mapa 1: Distribución espacial de domicilios</h3>
-          <p>Permite visualizar la distribución espacial general de los domicilios estudiantiles y formular preguntas sobre el radio de captación de la escuela, la movilidad urbana y la relación histórica entre institución y ciudad. Versión pública sin datos personales ni domicilios individualizados.</p>
+      </div>
+    </section>
+
+    <section class="section maps-section" id="mapas">
+      <div class="section-heading">
+        <p class="eyebrow">Lectura espacial</p>
+        <h2>Mapas de domicilios estudiantiles</h2>
+        <p>
+          Los mapas se publican como versiones agregadas y sanitizadas. Su objetivo es permitir una lectura
+          territorial de la matrícula sin exponer registros individuales ni direcciones personalizadas.
+        </p>
+      </div>
+
+      <div class="map-stack">
+        <article class="map-feature">
+          <div class="map-feature-header">
+            <p class="project-kicker">Mapa interactivo · versión pública agregada</p>
+            <h3>Distribución espacial de domicilios</h3>
+          </div>
+          <div class="map-frame-wrapper">
+            <iframe
+              class="map-frame"
+              src="assets/mapas/mapa-domicilios-publico.html"
+              title="Mapa público agregado de domicilios estudiantiles"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <p>
+            Permite visualizar la distribución espacial general de los domicilios estudiantiles y formular
+            preguntas sobre el radio de captación de la escuela, la movilidad urbana y la relación histórica
+            entre institución y ciudad.
+          </p>
+          <p class="map-note">Versión pública sin datos personales, direcciones individualizadas ni registros fila por fila.</p>
+          <div class="map-actions">
+            <a href="assets/mapas/mapa-domicilios-publico.html" target="_blank" rel="noopener">Abrir mapa interactivo</a>
+          </div>
         </article>
-        <article class="visual-card">
-          <iframe
-            class="map-frame"
-            src="assets/mapas/mapa-calor-publico.html"
-            title="Mapa de calor público de domicilios estudiantiles"
-            loading="lazy"
-          ></iframe>
-          <img
-            class="visual-image visual-image-secondary"
-            src="assets/mapas/mapa-calor-densidad-espacial.png"
-            alt="Mapa de calor agregado de densidad espacial de domicilios estudiantiles"
-          />
-          <h3>Mapa 2: Mapa de calor de domicilios estudiantiles</h3>
-          <p>Permite observar zonas de mayor concentración territorial sin exponer trayectorias individuales, favoreciendo una lectura agregada de la procedencia estudiantil. Versión pública sin datos personales ni domicilios individualizados.</p>
+
+        <article class="map-feature">
+          <div class="map-feature-header">
+            <p class="project-kicker">Mapa de calor · lectura agregada</p>
+            <h3>Concentración territorial de la matrícula</h3>
+          </div>
+          <div class="map-frame-wrapper">
+            <iframe
+              class="map-frame"
+              src="assets/mapas/mapa-calor-publico.html"
+              title="Mapa de calor público de domicilios estudiantiles"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <figure class="map-static-panel">
+            <img
+              class="map-image"
+              src="assets/mapas/mapa-calor-densidad-espacial.png"
+              alt="Mapa de calor agregado de densidad espacial de domicilios estudiantiles"
+            />
+            <figcaption>Imagen estática de referencia para la lectura agregada de concentración espacial.</figcaption>
+          </figure>
+          <p>
+            Permite observar zonas de mayor concentración territorial sin exponer trayectorias individuales,
+            favoreciendo una lectura agregada de la procedencia estudiantil.
+          </p>
+          <p class="map-note">Versión pública sin datos personales, direcciones individualizadas ni registros fila por fila.</p>
+          <div class="map-actions">
+            <a href="assets/mapas/mapa-calor-publico.html" target="_blank" rel="noopener">Abrir mapa interactivo</a>
+          </div>
         </article>
       </div>
     </section>
