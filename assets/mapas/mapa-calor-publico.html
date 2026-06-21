@@ -7,17 +7,15 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQCVf5v5rSjslGxQr4GdOlU4r8pN340=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <style>
-    html, body, #map { height: 100%; margin: 0; overflow: hidden; }
+    html, body, #map, .leaflet-container { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }
     body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f7f3ea; }
     .leaflet-popup-content, .leaflet-tooltip { color: #1f2933; font-size: 13px; }
-    .map-note { position: absolute; z-index: 500; left: 10px; bottom: 10px; max-width: min(280px, calc(100% - 20px)); padding: 7px 9px; border-radius: 10px; background: rgba(255, 253, 248, 0.84); border: 1px solid rgba(216, 211, 199, 0.8); color: #344250; font-size: 10.5px; line-height: 1.35; box-shadow: 0 8px 20px rgba(16, 36, 58, 0.12); }
   </style>
   <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
   <title>Mapa de calor público de domicilios estudiantiles</title>
 </head>
 <body>
   <div id="map" role="img" aria-label="Mapa de calor público de domicilios estudiantiles agregados"></div>
-  <div class="map-note">Mapa de calor público con celdas agregadas.</div>
   <script>
     const cells = [[-34.62, -58.42, 55], [-34.62, -58.4, 41], [-34.62, -58.38, 22], [-34.6, -58.4, 22], [-34.6, -58.42, 18], [-34.64, -58.48, 14], [-34.64, -58.4, 11], [-34.64, -58.36, 10], [-34.62, -58.44, 10], [-34.58, -58.42, 10], [-34.62, -58.46, 9], [-34.64, -58.46, 7], [-34.64, -58.42, 7], [-34.6, -58.44, 7], [-34.62, -58.48, 6], [-34.6, -58.38, 6], [-34.56, -58.46, 6], [-34.66, -58.4, 3], [-34.64, -58.52, 3], [-34.64, -58.38, 3], [-34.58, -58.48, 3], [-34.58, -58.4, 3]];
     const metadata = {"source": "Public aggregated version generated from local heat-map coordinates", "grid_degrees": 0.02, "minimum_count_per_cell": 3, "published_cells": 22, "suppressed_records_in_small_cells": 20};
@@ -37,6 +35,12 @@
       maxZoom: 17,
       gradient: { 0.25: '#e8d89b', 0.55: '#b08a3c', 0.85: '#783344' }
     }).addTo(map);
+    window.addEventListener('load', () => {
+      setTimeout(() => map.invalidateSize(), 150);
+    });
+    window.addEventListener('resize', () => {
+      setTimeout(() => map.invalidateSize(), 150);
+    });
   </script>
 </body>
 </html>
