@@ -25,8 +25,14 @@ This release publishes public, aggregate, and reproducible methodological materi
 - Repetition/IDEM marks evaluated: 398.
 - Correctly resolved by the pipeline: 397.
 
+## DOI
+
+Version DOI: https://doi.org/10.5281/zenodo.22134991
+
+Concept DOI: https://doi.org/10.5281/zenodo.22134990
+
+The DOI corresponds to the archived `v1.0-paper3` snapshot.
+
 ## Privacy and restrictions
 
 Only aggregate results and reproducible documentation are published. Identifiable records, exact addresses, individual coordinates, archival images, full validation spreadsheets, and row-level discrepancies remain restricted.
-
-No DOI is declared in this repository unless and until a real Zenodo DOI is minted.

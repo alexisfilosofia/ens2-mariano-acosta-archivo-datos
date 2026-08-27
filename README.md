@@ -19,6 +19,8 @@ La carpeta `paper3_metodos/` contiene la release pública y reproducible asociad
 
 Por razones de privacidad y resguardo documental, esta release no publica datos individuales del corpus, nombres de estudiantes, nombres de padres o tutores, domicilios históricos individualizados, coordenadas individuales, fotografías de los libros, planillas completas de validación ni discrepancias fila por fila.
 
+DOI de la versión archivada `v1.0-paper3`: https://doi.org/10.5281/zenodo.22134991. El DOI corresponde al snapshot del commit `77c586f` etiquetado como `v1.0-paper3`; los commits posteriores sólo actualizan metadatos de citación.
+
 ## Assets incorporados
 
 - `assets/logo-mariano-acosta.png`: imagen institucional provista para la página.

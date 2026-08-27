@@ -56,3 +56,11 @@ El notebook usa sólo tablas agregadas publicadas en `paper3_metodos/data/`. Los
 ## Privacidad
 
 La publicación pública excluye materiales individualizantes y conserva fuera del repositorio abierto los datos restringidos. El archivo `reproducibility/privacy_audit.md` documenta los controles aplicados antes de la release.
+
+## Citation
+
+Version DOI: https://doi.org/10.5281/zenodo.22134991
+
+Concept DOI: https://doi.org/10.5281/zenodo.22134990
+
+The DOI above corresponds to the archived snapshot `v1.0-paper3` at commit `77c586f`. Later commits on `main` may update citation metadata without changing the archived release snapshot.
