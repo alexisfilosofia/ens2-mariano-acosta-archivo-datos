@@ -1,0 +1,2 @@
+category,marks_evaluated,resolved_correctly,unresolved_or_incorrect,success_percent,note
+contextual_repetition_idem,398,397,1,99.75,Correct expansion to inherited value is counted as correct under the transcription contract.

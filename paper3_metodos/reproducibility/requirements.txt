@@ -1,0 +1,2 @@
+nbconvert>=7.16
+ipykernel>=6.29

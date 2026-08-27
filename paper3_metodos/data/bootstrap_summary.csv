@@ -1,0 +1,2 @@
+measure,estimate_percent,ci95_lower_percent,ci95_upper_percent,replicates,note
+semantic_resolved_agreement,94.29,92.70,95.98,documented,Aggregate bootstrap interval from restricted validation workflow; no row-level resamples are public.

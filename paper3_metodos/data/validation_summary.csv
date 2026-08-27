@@ -1,0 +1,14 @@
+metric,value,unit,public_reproducibility,note
+corpus_total,1438,records,documented_aggregate,Total records in the 1910-1915 corpus.
+independent_sample,180,records,documented_aggregate,Independent validation sample.
+conceptual_comparisons,1980,comparisons,recomputed_from_public_tables,180 records times 11 conceptual fields.
+matches,1867,comparisons,recomputed_from_public_tables,Semantic/resolved matches.
+semantic_resolved_agreement,94.29,percent,recomputed_from_public_tables,Matches divided by conceptual comparisons.
+annual_composition_weighted_agreement,94.41,percent,recomputed_from_public_tables,Year-level agreement weighted by corpus composition.
+bootstrap_ci95_lower,92.70,percent,documented_aggregate,Aggregate bootstrap lower bound from restricted validation workflow.
+bootstrap_ci95_upper,95.98,percent,documented_aggregate,Aggregate bootstrap upper bound from restricted validation workflow.
+sensitivity_excluding_empty_empty,93.29,percent,recomputed_from_public_tables,Excludes 295 empty-empty comparisons.
+double_review_records,60,records,documented_aggregate,Records independently reviewed by two reviewers.
+reviewer_exact_agreement,100.00,percent,recomputed_from_public_tables,Exact agreement over substantive double-review comparisons.
+idem_marks_evaluated,398,marks,documented_aggregate,Contextual repetition/IDEM marks evaluated.
+idem_resolved_correctly,397,marks,recomputed_from_public_tables,IDEM marks resolved correctly by the pipeline.

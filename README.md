@@ -11,6 +11,13 @@ La página presenta una primera instancia de trabajo sobre el Libro Registro de 
 - Logo institucional: `assets/logo-mariano-acosta.png`
 - Gráficos agregados: `assets/graficos/`
 - Mapa de calor estático agregado: `assets/mapas/`
+- Materiales metodológicos reproducibles del Paper 3: `paper3_metodos/`
+
+## Paper 3: materiales metodológicos reproducibles
+
+La carpeta `paper3_metodos/` contiene la release pública y reproducible asociada al estudio metodológico "Del folio a la evidencia: un protocolo reproducible para registros escolares manuscritos". Incluye documentación del protocolo, tablas agregadas de validación, un notebook reproducible sanitizado, dependencias y un manifiesto de hashes.
+
+Por razones de privacidad y resguardo documental, esta release no publica datos individuales del corpus, nombres de estudiantes, nombres de padres o tutores, domicilios históricos individualizados, coordenadas individuales, fotografías de los libros, planillas completas de validación ni discrepancias fila por fila.
 
 ## Assets incorporados
 

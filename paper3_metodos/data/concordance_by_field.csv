@@ -1,0 +1,12 @@
+field,comparisons,matches,disagreements,agreement_percent,note
+registration_year,180,180,0,100.00,Aggregate conceptual field.
+registration_identifier,180,178,2,98.89,Aggregate non-personal validation key.
+course_or_section,180,177,3,98.33,Aggregate school-structure field.
+age_resolved,180,176,4,97.78,Aggregate age field.
+entry_status_or_condition,180,174,6,96.67,Aggregate status field.
+nationality_category,180,172,8,95.56,Aggregate category field.
+guardian_occupation_category,180,168,12,93.33,Aggregate occupational category.
+residential_locality_category,180,166,14,92.22,Aggregate locality category, no addresses.
+address_resolution_status,180,164,16,91.11,Aggregate resolution status, no address strings.
+contextual_repetition_resolution,180,160,20,88.89,Aggregate contextual resolution field.
+source_uncertainty_flag,180,152,28,84.44,Aggregate QA/uncertainty flag.
