@@ -1,6 +1,6 @@
 # Paper 3: materiales metodológicos reproducibles
 
-Release pública activa `v1.1-paper3` para el artículo metodológico:
+Versión científica vigente: `v1.1-paper3`
 
 **Del folio a la evidencia: un protocolo reproducible para registros escolares manuscritos**
 
@@ -11,18 +11,9 @@ ORCID: https://orcid.org/0009-0007-8671-9823
 
 Esta carpeta contiene materiales públicos y reproducibles para documentar el protocolo de transcripción estructurada, resolución contextual, normalización, control de calidad y validación humana aplicado a registros escolares manuscritos del período 1910-1915.
 
-La release trabaja exclusivamente con documentación metodológica y resultados agregados. No incluye nombres de estudiantes, nombres de padres o tutores, domicilios históricos individualizados, coordenadas individuales, fotografías de los libros, planillas completas de validación, discrepancias fila por fila ni bases restringidas.
+La release trabaja exclusivamente con documentación metodológica y resultados agregados. No incluye datos individuales del corpus, nombres de estudiantes, nombres de padres o tutores, domicilios históricos individualizados, coordenadas individuales, fotografías de los libros, planillas completas de validación, discrepancias fila por fila ni bases restringidas.
 
-## Estructura
-
-- `protocolo/`: descripción del protocolo público de transcripción, validación y resguardo.
-- `notebooks/`: notebook reproducible sanitizado.
-- `data/`: tablas agregadas necesarias para reproducir las métricas públicas.
-- `reproducibility/`: dependencias, manifiesto SHA-256 y auditoría de privacidad.
-- `release_notes.md`: notas de la release pública v1.0.
-- `release_notes_v1.1.md`: notas de la release correctiva v1.1.
-
-## Resultados públicos auditados
+## Resultados canónicos
 
 | Métrica | Resultado |
 | --- | ---: |
@@ -33,17 +24,13 @@ La release trabaja exclusivamente con documentación metodológica y resultados 
 | Concordancia semántica/resuelta | 94,29% |
 | Concordancia ponderada por composición anual | 94,41% |
 | IC95% bootstrap | 92,70%-95,98% |
-| Sensibilidad excluyendo 295 comparaciones vacío-vacío | 93,29% |
-| Doble revisión | 60 registros |
-| Acuerdo exacto entre revisores independientes | 100% sobre 1.080 comparaciones sustantivas |
-| Marcas de repetición/IDEM evaluadas | 398 |
-| Resueltas correctamente por el pipeline | 397 |
+| Sensibilidad excluyendo vacío-vacío | 93,29% |
+| Acuerdo interrevisor | 1.080/1.080 |
+| Resolución de marcas IDEM | 397/398 |
 
-El intervalo bootstrap publicado corresponde al estimador ponderado por composición anual. Se informa como agregado proveniente del workflow restringido con 5.000 réplicas y semilla `20260827`; las réplicas no pueden reconstruirse desde los agregados públicos porque los insumos fila por fila no se publican.
+El intervalo bootstrap corresponde al estimador ponderado por composición anual. Se informa como agregado proveniente del workflow restringido; las réplicas no pueden reconstruirse desde los agregados públicos porque los insumos fila por fila no se publican.
 
-Estos resultados no deben describirse como CER, WER ni como "accuracy de un motor HTR". Lo evaluado es un pipeline de transcripción estructurada, resolución contextual, normalización, QA y validación humana.
-
-Un `IDEM` expandido correctamente al valor heredado no se considera error, porque el contrato original de transcripción permitía producir directamente el valor resuelto.
+Estas métricas no son CER, WER ni accuracy de un motor HTR. Lo evaluado es el pipeline de transcripción estructurada, resolución contextual, normalización, QA y validación humana. Un `IDEM` expandido correctamente al valor heredado cuenta como concordancia semántica bajo el contrato original.
 
 ## Reproducibilidad
 
@@ -56,23 +43,15 @@ jupyter nbconvert --to notebook --execute paper3_metodos/notebooks/paper3_reprod
 
 El notebook usa sólo tablas agregadas publicadas en `paper3_metodos/data/`. Los resultados derivados de revisión restringida se documentan como agregados y no permiten reconstruir casos individuales.
 
-## Privacidad
+## DOI
 
-La publicación pública excluye materiales individualizantes y conserva fuera del repositorio abierto los datos restringidos. El archivo `reproducibility/privacy_audit.md` documenta los controles aplicados antes de la release.
+- DOI de versión: https://doi.org/10.5281/zenodo.22135344
+- DOI conceptual: https://doi.org/10.5281/zenodo.22134990
 
-## Historial de releases
+## Historial
 
-- `v1.0-paper3`: primera release archivada. Queda superseded para uso científico por `v1.1-paper3` debido a una distribución incorrecta de discrepancias en las tablas agregadas por campo y año. Los totales globales de v1.0 eran correctos: 1.867 coincidencias sobre 1.980 comparaciones (94,29%). DOI de versión v1.0: https://doi.org/10.5281/zenodo.22134991.
-- `v1.1-paper3`: release correctiva que restaura las distribuciones auditadas reales por campo y año, y corrige la asociación del intervalo bootstrap con el estimador ponderado por composición anual de 94,41%.
+`v1.0-paper3` fue superseded porque sus distribuciones públicas por campo y año eran incorrectas, aunque sus totales globales eran correctos. El historial resumido está en `CHANGELOG.md`.
 
 ## Licencia
 
 Los materiales metodológicos públicos se distribuyen bajo CC BY 4.0. Ver `../LICENSE.md`.
-
-## Citation
-
-Version DOI: https://doi.org/10.5281/zenodo.22135344
-
-Concept DOI: https://doi.org/10.5281/zenodo.22134990
-
-The version DOI above corresponds to the archived snapshot `v1.1-paper3` at commit `4088618`. The v1.0 DOI remains part of the release history and corresponds to the archived snapshot `v1.0-paper3` at commit `77c586f`.

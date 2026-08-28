@@ -10,49 +10,18 @@ La página presenta una primera instancia de trabajo sobre el Libro Registro de 
 - Estilos: `styles.css`
 - Logo institucional: `assets/logo-mariano-acosta.png`
 - Gráficos agregados: `assets/graficos/`
-- Mapa de calor estático agregado: `assets/mapas/`
+- Mapas públicos agregados: `assets/mapas/`
 - Materiales metodológicos reproducibles del Paper 3: `paper3_metodos/`
 
-## Paper 3: materiales metodológicos reproducibles
+## Paper 3
 
-La carpeta `paper3_metodos/` contiene la release pública y reproducible asociada al estudio metodológico "Del folio a la evidencia: un protocolo reproducible para registros escolares manuscritos". Incluye documentación del protocolo, tablas agregadas de validación, un notebook reproducible sanitizado, dependencias y un manifiesto de hashes.
+La versión científica vigente de los materiales metodológicos reproducibles es `v1.1-paper3`.
 
-Por razones de privacidad y resguardo documental, esta release no publica datos individuales del corpus, nombres de estudiantes, nombres de padres o tutores, domicilios históricos individualizados, coordenadas individuales, fotografías de los libros, planillas completas de validación ni discrepancias fila por fila.
+- DOI de versión: https://doi.org/10.5281/zenodo.22135344
+- DOI conceptual: https://doi.org/10.5281/zenodo.22134990
 
-La versión activa para uso científico es `v1.1-paper3`, release correctiva que reemplaza las distribuciones agregadas por campo y por año y asocia el IC95% bootstrap al estimador ponderado por composición anual. `v1.0-paper3` conserva totales globales correctos, pero queda superseded para citación científica por `v1.1-paper3`.
+Los materiales están disponibles en `paper3_metodos/` e incluyen documentación metodológica, tablas agregadas de validación, notebook reproducible, dependencias, manifiesto SHA-256 y auditoría de privacidad.
 
-DOI de la versión archivada `v1.1-paper3`: https://doi.org/10.5281/zenodo.22135344. El DOI corresponde al snapshot del commit `4088618` etiquetado como `v1.1-paper3`.
+## Privacidad
 
-DOI de la versión archivada `v1.0-paper3`: https://doi.org/10.5281/zenodo.22134991. El DOI corresponde al snapshot del commit `77c586f` etiquetado como `v1.0-paper3`.
-
-## Assets incorporados
-
-- `assets/logo-mariano-acosta.png`: imagen institucional provista para la página.
-- `assets/graficos/`: gráficos agregados y publicables reutilizados desde materiales sanitizados del proyecto geoespacial.
-- `assets/mapas/mapa-calor-densidad-espacial.png`: mapa de calor estático incorporado como visualización agregada.
-- `assets/mapas/mapa-domicilios-publico.html`: mapa interactivo público con celdas espaciales agregadas. No contiene nombres, direcciones individualizadas ni registros fila por fila.
-- `assets/mapas/mapa-calor-publico.html`: mapa de calor interactivo público construido sobre las mismas celdas agregadas. Omite celdas con menos de 3 casos.
-
-## Assets revisados y no incorporados
-
-Se revisaron mapas HTML interactivos disponibles en repositorios locales relacionados. Los mapas originales con puntos, popups, nombres de estudiantes, profesiones de tutores o domicilios individualizados no se incorporan a esta página pública. En su lugar se publican versiones derivadas y agregadas. Cualquier mapa interactivo con coordenadas fila por fila requiere una revisión ética y una versión agregada o anonimizada antes de su publicación.
-
-## Privacidad y patrimonio
-
-El sitio está diseñado para trabajar con datos agregados y visualizaciones generales. No publica nombres individuales de estudiantes, direcciones individualizadas, documentos de identidad ni datos personales del equipo de trabajo.
-
-El documento de referencia local `informe_PST_estadística.pdf` no se incluye en este repositorio porque contiene datos personales que no deben publicarse en una página abierta.
-
-## Uso local
-
-Abrir `index.html` directamente en el navegador o servir la carpeta con un servidor estático local:
-
-```bash
-python -m http.server 8000
-```
-
-Luego visitar:
-
-```text
-http://127.0.0.1:8000/
-```
+El sitio publica resultados agregados y visualizaciones generales. No publica datos individuales del corpus, nombres de estudiantes, nombres de padres o tutores, domicilios históricos individualizados, coordenadas individuales, fotografías de los libros, planillas completas de validación ni discrepancias fila por fila.

@@ -10,8 +10,9 @@ Audited paths:
 - `CITATION.cff`
 - `LICENSE.md`
 - root `README.md`
+- `index.html`
 
-This corrective release was rebuilt directly from the audited aggregate values supplied for v1.1. No external ZIP source and no row-level validation data were used.
+This audit was refreshed after the final editorial cleanup of `main` following publication of `v1.1-paper3`. No row-level validation data were used.
 
 ## Automated checks
 
@@ -48,6 +49,6 @@ Allowed proper names present in the release:
 - Mariano Acosta, as the institutional name;
 - Armenia Euredjian, as the archive name.
 
-## Corrective-release decision
+## Public-release decision
 
-The materials in `paper3_metodos/` are suitable for public release as aggregate methodological documentation and reproducibility materials. Version `v1.1-paper3` adds no identifiable or row-level data; restricted row-level data and archival images remain outside the repository.
+The materials in `paper3_metodos/` and the updated public landing page are suitable for public release as aggregate methodological documentation and divulgation materials. Version `v1.1-paper3` remains the scientific release in force; restricted row-level data and archival images remain outside the repository.
