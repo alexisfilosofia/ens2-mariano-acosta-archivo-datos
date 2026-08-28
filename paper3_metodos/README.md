@@ -71,8 +71,8 @@ Los materiales metodológicos públicos se distribuyen bajo CC BY 4.0. Ver `../L
 
 ## Citation
 
-Version DOI: pending Zenodo archival for `v1.1-paper3`.
+Version DOI: https://doi.org/10.5281/zenodo.22135344
 
 Concept DOI: https://doi.org/10.5281/zenodo.22134990
 
-The v1.1 DOI will be added after Zenodo archives the `v1.1-paper3` snapshot. The v1.0 DOI above remains part of the release history and corresponds to the archived snapshot `v1.0-paper3` at commit `77c586f`.
+The version DOI above corresponds to the archived snapshot `v1.1-paper3` at commit `4088618`. The v1.0 DOI remains part of the release history and corresponds to the archived snapshot `v1.0-paper3` at commit `77c586f`.

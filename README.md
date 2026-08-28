@@ -21,7 +21,9 @@ Por razones de privacidad y resguardo documental, esta release no publica datos 
 
 La versión activa para uso científico es `v1.1-paper3`, release correctiva que reemplaza las distribuciones agregadas por campo y por año y asocia el IC95% bootstrap al estimador ponderado por composición anual. `v1.0-paper3` conserva totales globales correctos, pero queda superseded para citación científica por `v1.1-paper3`.
 
-DOI de la versión archivada `v1.0-paper3`: https://doi.org/10.5281/zenodo.22134991. El DOI corresponde al snapshot del commit `77c586f` etiquetado como `v1.0-paper3`; el DOI de `v1.1-paper3` se incorporará luego del archivado de Zenodo sin mover el tag.
+DOI de la versión archivada `v1.1-paper3`: https://doi.org/10.5281/zenodo.22135344. El DOI corresponde al snapshot del commit `4088618` etiquetado como `v1.1-paper3`.
+
+DOI de la versión archivada `v1.0-paper3`: https://doi.org/10.5281/zenodo.22134991. El DOI corresponde al snapshot del commit `77c586f` etiquetado como `v1.0-paper3`.
 
 ## Assets incorporados
 
