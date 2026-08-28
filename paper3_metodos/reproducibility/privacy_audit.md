@@ -1,4 +1,4 @@
-# Privacy audit for `v1.0-paper3`
+# Privacy audit for `v1.1-paper3`
 
 Date: 2026-08-27
 
@@ -8,9 +8,10 @@ Audited paths:
 
 - `paper3_metodos/`
 - `CITATION.cff`
+- `LICENSE.md`
 - root `README.md`
 
-The release was built without using a public ZIP source because `paper3_public_release_v1.0-paper3.zip` was not found in the accessible workspace, attachments, or Spotlight index.
+This corrective release was rebuilt directly from the audited aggregate values supplied for v1.1. No external ZIP source and no row-level validation data were used.
 
 ## Automated checks
 
@@ -23,7 +24,7 @@ The audit scanned text-based release files for:
 - street-address-like patterns;
 - private file ID hints.
 
-Result: **0 findings** across 16 text-based files.
+Result: **0 findings** across 18 text-based files.
 
 ## Sensitive-term review
 
@@ -47,6 +48,6 @@ Allowed proper names present in the release:
 - Mariano Acosta, as the institutional name;
 - Armenia Euredjian, as the archive name.
 
-## Publication decision
+## Corrective-release decision
 
-The materials in `paper3_metodos/` are suitable for public release as aggregate methodological documentation and reproducibility materials. Restricted row-level data and archival images remain outside the repository.
+The materials in `paper3_metodos/` are suitable for public release as aggregate methodological documentation and reproducibility materials. Version `v1.1-paper3` adds no identifiable or row-level data; restricted row-level data and archival images remain outside the repository.

@@ -1,12 +1,12 @@
 field,comparisons,matches,disagreements,agreement_percent,note
-registration_year,180,180,0,100.00,Aggregate conceptual field.
-registration_identifier,180,178,2,98.89,Aggregate non-personal validation key.
-course_or_section,180,177,3,98.33,Aggregate school-structure field.
-age_resolved,180,176,4,97.78,Aggregate age field.
-entry_status_or_condition,180,174,6,96.67,Aggregate status field.
-nationality_category,180,172,8,95.56,Aggregate category field.
-guardian_occupation_category,180,168,12,93.33,Aggregate occupational category.
-residential_locality_category,180,166,14,92.22,Aggregate locality category, no addresses.
-address_resolution_status,180,164,16,91.11,Aggregate resolution status, no address strings.
-contextual_repetition_resolution,180,160,20,88.89,Aggregate contextual resolution field.
-source_uncertainty_flag,180,152,28,84.44,Aggregate QA/uncertainty flag.
+fecha,180,180,0,100.00,Fecha histórica efectiva.
+observaciones,180,180,0,100.00,Observaciones del registro.
+nacionalidad_alumno,180,177,3,98.33,Nacionalidad del alumno; concordancia semántica/resuelta.
+edad,180,173,7,96.11,Edad del alumno.
+procedencia,180,173,7,96.11,Procedencia; concordancia semántica/resuelta.
+curso,180,171,9,95.00,Curso consignado.
+nombre_alumno,180,170,10,94.44,Nombre del alumno; sólo se publica el agregado, no valores individuales.
+profesion_tutor,180,168,12,93.33,Profesión del tutor; sólo agregado.
+nacionalidad_tutor,180,166,14,92.22,Nacionalidad del tutor; concordancia semántica/resuelta.
+domicilio,180,160,20,88.89,Domicilio; sólo se publican conteos agregados, no direcciones.
+padre_tutor,180,149,31,82.78,Padre/tutor; sólo se publica el agregado, no nombres individuales.

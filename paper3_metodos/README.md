@@ -1,6 +1,6 @@
 # Paper 3: materiales metodológicos reproducibles
 
-Release pública `v1.0-paper3` para el artículo metodológico:
+Release pública activa `v1.1-paper3` para el artículo metodológico:
 
 **Del folio a la evidencia: un protocolo reproducible para registros escolares manuscritos**
 
@@ -19,7 +19,8 @@ La release trabaja exclusivamente con documentación metodológica y resultados 
 - `notebooks/`: notebook reproducible sanitizado.
 - `data/`: tablas agregadas necesarias para reproducir las métricas públicas.
 - `reproducibility/`: dependencias, manifiesto SHA-256 y auditoría de privacidad.
-- `release_notes.md`: notas de la release pública.
+- `release_notes.md`: notas de la release pública v1.0.
+- `release_notes_v1.1.md`: notas de la release correctiva v1.1.
 
 ## Resultados públicos auditados
 
@@ -37,6 +38,8 @@ La release trabaja exclusivamente con documentación metodológica y resultados 
 | Acuerdo exacto entre revisores independientes | 100% sobre 1.080 comparaciones sustantivas |
 | Marcas de repetición/IDEM evaluadas | 398 |
 | Resueltas correctamente por el pipeline | 397 |
+
+El intervalo bootstrap publicado corresponde al estimador ponderado por composición anual. Se informa como agregado proveniente del workflow restringido con 5.000 réplicas y semilla `20260827`; las réplicas no pueden reconstruirse desde los agregados públicos porque los insumos fila por fila no se publican.
 
 Estos resultados no deben describirse como CER, WER ni como "accuracy de un motor HTR". Lo evaluado es un pipeline de transcripción estructurada, resolución contextual, normalización, QA y validación humana.
 
@@ -57,10 +60,19 @@ El notebook usa sólo tablas agregadas publicadas en `paper3_metodos/data/`. Los
 
 La publicación pública excluye materiales individualizantes y conserva fuera del repositorio abierto los datos restringidos. El archivo `reproducibility/privacy_audit.md` documenta los controles aplicados antes de la release.
 
+## Historial de releases
+
+- `v1.0-paper3`: primera release archivada. Queda superseded para uso científico por `v1.1-paper3` debido a una distribución incorrecta de discrepancias en las tablas agregadas por campo y año. Los totales globales de v1.0 eran correctos: 1.867 coincidencias sobre 1.980 comparaciones (94,29%). DOI de versión v1.0: https://doi.org/10.5281/zenodo.22134991.
+- `v1.1-paper3`: release correctiva que restaura las distribuciones auditadas reales por campo y año, y corrige la asociación del intervalo bootstrap con el estimador ponderado por composición anual de 94,41%.
+
+## Licencia
+
+Los materiales metodológicos públicos se distribuyen bajo CC BY 4.0. Ver `../LICENSE.md`.
+
 ## Citation
 
-Version DOI: https://doi.org/10.5281/zenodo.22134991
+Version DOI: pending Zenodo archival for `v1.1-paper3`.
 
 Concept DOI: https://doi.org/10.5281/zenodo.22134990
 
-The DOI above corresponds to the archived snapshot `v1.0-paper3` at commit `77c586f`. Later commits on `main` may update citation metadata without changing the archived release snapshot.
+The v1.1 DOI will be added after Zenodo archives the `v1.1-paper3` snapshot. The v1.0 DOI above remains part of the release history and corresponds to the archived snapshot `v1.0-paper3` at commit `77c586f`.
