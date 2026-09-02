@@ -9,6 +9,7 @@ authors:
 version: "1.2"
 date-released: "2026-09-01"
 year: 2026
+doi: "10.5281/zenodo.22240577"
 url: "https://github.com/alexisfilosofia/ens2-mariano-acosta-archivo-datos"
 repository-code: "https://github.com/alexisfilosofia/ens2-mariano-acosta-archivo-datos"
 abstract: "Public aggregate reproducibility materials for a structured transcription, contextual resolution, normalization, QA, assisted audit, and independent human validation pipeline applied to handwritten school registration records from 1910-1915."

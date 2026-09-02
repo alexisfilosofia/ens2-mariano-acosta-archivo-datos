@@ -29,7 +29,7 @@ jupyter nbconvert --to notebook --execute paper3_metodos/notebooks/paper3_reprod
 
 DOI conceptual: https://doi.org/10.5281/zenodo.22134990
 
-El DOI específico de `v1.2-paper3` se incorpora en un commit de metadatos posterior al archivado del tag por Zenodo.
+DOI de versión `v1.2-paper3`: https://doi.org/10.5281/zenodo.22240577
 
 ## Historial
 

@@ -8,7 +8,7 @@ Los materiales metodológicos reproducibles están en `paper3_metodos/`. La vers
 
 DOI conceptual: https://doi.org/10.5281/zenodo.22134990
 
-El DOI específico de versión se añade después del archivado automático de la release por Zenodo.
+DOI de versión v1.2: https://doi.org/10.5281/zenodo.22240577
 
 ## Privacidad
 
