@@ -30,7 +30,7 @@ En la muestra auditada se evaluaron 398 marcas de repetición/IDEM y 397 fueron 
 
 La muestra independiente contiene 180 registros y 1.980 comparaciones conceptuales. La validación compara salidas estructuradas y resueltas contra revisión humana, con una métrica agregada de concordancia semántica/resuelta.
 
-La doble revisión documentada cubre 60 registros y 1.080 comparaciones sustantivas, con acuerdo exacto entre revisores independientes del 100% en ese subconjunto agregado.
+La doble revisión documentada cubre 60 registros y 1.080 comparaciones sustantivas, con 1.075 acuerdos exactos entre revisores independientes (99,54%). Los cinco desacuerdos humanos se conservan como tales y no se adjudican en una referencia única.
 
 ## Qué se publica
 

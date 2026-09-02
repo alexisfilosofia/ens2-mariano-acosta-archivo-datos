@@ -1,2 +1,2 @@
 measure,estimate_percent,ci95_lower_percent,ci95_upper_percent,replicates,note
-annual_composition_weighted_agreement,94.41,92.70,95.98,5000,"Stratified bootstrap interval from the restricted validation workflow; row-level resampling inputs are not public."
+annual_composition_weighted_agreement,94.41,92.70,95.98,5000,Stratified bootstrap interval from the restricted validation workflow; row-level resampling inputs are not public.

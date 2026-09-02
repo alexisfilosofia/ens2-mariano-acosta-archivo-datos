@@ -1,2 +1,2 @@
-subset,records,fields_per_record,comparisons,exact_matches,agreement_percent,note
-double_review,60,18,1080,1080,100.00,Substantive comparisons independently reviewed by two reviewers.
+subset,records,fields_per_record,comparisons,exact_matches,disagreements,agreement_percent,note
+double_review,60,18,1080,1075,5,99.54,Observed exact agreement across substantive fields independently reviewed by two reviewers.

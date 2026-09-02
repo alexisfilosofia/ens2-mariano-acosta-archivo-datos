@@ -1,54 +1,28 @@
-# Privacy audit for `v1.1-paper3`
+# Privacy audit for `v1.2-paper3`
 
-Date: 2026-08-27
+Date: 2026-09-01
 
 ## Scope
 
-Audited paths:
+The audit scanned the repository's 24 text-based files after applying the v1.2 patch and before tagging `v1.2-paper3`.
 
-- `paper3_metodos/`
-- `CITATION.cff`
-- `LICENSE.md`
-- root `README.md`
-- `index.html`
+## Automated Checks
 
-This audit was refreshed after the final editorial cleanup of `main` following publication of `v1.1-paper3`. No row-level validation data were used.
+The scan checked for email addresses, Google Drive/Docs URLs, local filesystem paths, credential markers, coordinate-like pairs, restricted-file markers and row-level discrepancy references.
 
-## Automated checks
+Result: 4 coordinate-like alerts, all in public map files:
 
-The audit scanned text-based release files for:
+- `assets/mapas/mapa-calor-publico.html`
+- `assets/mapas/mapa-domicilios-publico.html`
 
-- email addresses;
-- personal local paths, mounted-volume paths and cloud document URLs;
-- credential markers and authentication string formats;
-- latitude/longitude coordinate pairs;
-- street-address-like patterns;
-- private file ID hints.
+Manual review confirms that these coordinates are public aggregate grid cells, the map center and the institutional marker for ENS N.º 2 "Mariano Acosta"; they are not individual student coordinates or exact domiciles.
 
-Result: **0 findings** across 18 text-based files.
+## Sensitive-Term Review
 
-## Sensitive-term review
+Terms related to students, tutors, addresses, coordinates, photographs, restricted validation sheets and row-level discrepancies appear only in privacy statements, methodological exclusions, aggregate field descriptions or public aggregate-map metadata.
 
-The release also searched for terms related to:
+Allowed proper names present in the public materials are Alexis Marcelo Perissé as author, Mariano Acosta as the institutional name and Armenia Euredjian as the archive name.
 
-- names of students;
-- names of parents or tutors;
-- domiciles and addresses;
-- coordinates;
-- photographs;
-- full validation sheets;
-- row-level discrepancies;
-- restricted bases;
-- `IDEM` handling.
+## Public-Release Decision
 
-Result: terms related to people, addresses, coordinates, photographs and restricted validation appear only in privacy statements, methodological exclusions, or aggregate-field descriptions. No student names, parent/tutor names, individual addresses, individual coordinates, archival photographs, row-level discrepancies, complete validation tables, private file IDs, tokens or credentials were found.
-
-Allowed proper names present in the release:
-
-- Alexis Marcelo Perissé, as author;
-- Mariano Acosta, as the institutional name;
-- Armenia Euredjian, as the archive name.
-
-## Public-release decision
-
-The materials in `paper3_metodos/` and the updated public landing page are suitable for public release as aggregate methodological documentation and divulgation materials. Version `v1.1-paper3` remains the scientific release in force; restricted row-level data and archival images remain outside the repository.
+Result: 0 privacy findings across 24 text-based files. No student/tutor names, row-level addresses, individual coordinates, archival images, restricted validation sheets, Drive IDs, local user paths, credentials or row-level discrepancies are included. The SHA-256 manifest is regenerated immediately before tagging `v1.2-paper3`.
