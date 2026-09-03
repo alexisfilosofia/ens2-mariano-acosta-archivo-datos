@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "scope": "Paper 3 assisted audit: 180 records and 11 conceptual dimensions",
+  "unit_of_comparison": "historical effective value by field",
+  "contract_invariants": {
+    "contextual_marks": "When the reviewer literal is an unequivocal IDEM mark, use the value resolved from the folio sequence; otherwise use the literal value.",
+    "date": "Compare resolved month and day with fecha_reconstruida; do not penalize the absence of the literal repetition mark in the legacy baseline.",
+    "missing": "Map missing values to the empty string; an empty-empty comparison counts as agreement in the primary metric and is removed only in the separately reported informative-comparison sensitivity.",
+    "horizontal_rule": "A horizontal absence mark is missing data and never propagates the preceding value.",
+    "non_retroactivity": "The comparator does not modify the baseline and does not impose prospective literal-layer requirements on the legacy extraction."
+  },
+  "comparators": {
+    "general_formal": [
+      "strip leading and trailing whitespace",
+      "lowercase",
+      "remove diacritics",
+      "map ordinal symbols º and ° to o",
+      "replace non-word character runs with one space",
+      "collapse whitespace"
+    ],
+    "age": "Parse numeric values; integral representations such as 16 and 16.0 are equivalent; otherwise use the general formal comparator.",
+    "course": "Apply the general formal comparator; extract the first standalone digit 1-9 with an optional ordinal suffix; retain orientation only when letras or a ciencias root is explicit; compare number|orientation.",
+    "nationality": "Apply the general formal comparator, then map only the explicitly enumerated historical abbreviations, demonyms and labels to the corresponding country category.",
+    "contextual_fields": [
+      "nacionalidad_alumno",
+      "procedencia",
+      "profesion_tutor",
+      "nacionalidad_tutor"
+    ]
+  },
+  "sensitivity_scenarios": {
+    "estricto_resuelto_tipado": "Preserve case, accents and punctuation after trimming; retain numeric equivalence for age and resolved comparison for dates and contextual marks.",
+    "minusculas_y_espacios": "Add lowercasing and whitespace collapse only.",
+    "normalizacion_formal": "Add diacritic, punctuation and ordinal-symbol normalization, without semantic recoding of course or nationality.",
+    "principal_sin_recodificacion_nacionalidad": "Use the course comparator but not the nationality map.",
+    "principal_sin_canonizacion_curso": "Use the nationality map but not course canonicalization.",
+    "principal_reportado": "Use general formal, typed age, resolved date/context, course canonicalization and the enumerated nationality map."
+  },
+  "prohibited_inferences": [
+    "Do not modernize a historical spelling by plausibility.",
+    "Do not infer a course orientation that is not explicit.",
+    "Do not extend the nationality dictionary case by case after inspecting disagreements.",
+    "Do not treat a QA flag as proof of error.",
+    "Do not adjudicate the five disagreements between independent reviewers."
+  ]
+}
