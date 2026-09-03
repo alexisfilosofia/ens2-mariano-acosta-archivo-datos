@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "verified_against_restricted_closed_workbook",
   "verification_date": "2026-09-03",
-  "release_scope": "main_after_v1.2-paper3; candidate_for_next_archived_release",
+  "release_scope": "v1.3.1-paper3",
   "population": {
     "target": "closed_corpus_1910_1915",
     "records": 1438,

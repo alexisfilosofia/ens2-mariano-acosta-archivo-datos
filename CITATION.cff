@@ -1,15 +1,15 @@
 cff-version: 1.2.0
-message: "If you use these reproducible methodological materials, please cite the archived v1.2 release."
+message: "If you use these reproducible methodological materials, please cite the archived release identified below."
 title: "Del folio a la evidencia: materiales reproducibles para la validación de registros escolares manuscritos"
 type: dataset
 authors:
   - family-names: "Perissé"
     given-names: "Alexis Marcelo"
     orcid: "https://orcid.org/0009-0007-8671-9823"
-version: "1.2"
-date-released: "2026-09-01"
+version: "1.3.1"
+date-released: "2026-09-03"
 year: 2026
-doi: "10.5281/zenodo.22240577"
+doi: "10.5281/zenodo.22134990"
 url: "https://github.com/alexisfilosofia/ens2-mariano-acosta-archivo-datos"
 repository-code: "https://github.com/alexisfilosofia/ens2-mariano-acosta-archivo-datos"
 abstract: "Public aggregate reproducibility materials for a structured transcription, contextual resolution, normalization, QA, assisted audit, and independent human validation pipeline applied to handwritten school registration records from 1910-1915."

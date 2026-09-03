@@ -1,7 +1,7 @@
 # Paper 3: materiales metodológicos reproducibles
 
-Versión científica archivada: `v1.2-paper3`  
-Estado de la rama `main`: incorpora una auditoría adicional del diseño muestral, candidata a la próxima release archivada.
+Versión científica archivada: `v1.3.1-paper3`  
+Estado de la rama `main`: alineado con la auditoría de muestreo y los metadatos de la versión archivada.
 
 **Del folio a la evidencia: un protocolo reproducible para registros escolares manuscritos**
 
@@ -44,7 +44,7 @@ python paper3_metodos/reproducibility/verify_sampling.py \
   --closed-workbook /ruta/plantillas_validacion_manual_cerrada_v1.xlsm
 ```
 
-El verificador reproduce ambas selecciones y las compara con compromisos SHA-256 públicos del marco ordenado y de las dos membresías. Los compromisos certifican el conjunto completo, pero no revelan qué registros fueron seleccionados. La rama `main` fue contrastada el 3 de septiembre de 2026 contra el baseline y la planilla cerrada: 180/180 y 60/60 identificadores coincidieron, el control fue un subconjunto de la auditoría y cada año aportó 30 y 10 registros respectivamente.
+El verificador reproduce ambas selecciones y las compara con compromisos SHA-256 públicos del marco ordenado y de las dos membresías. Los compromisos certifican el conjunto completo, pero no revelan qué registros fueron seleccionados. La rama `main` fue contrastada el 3 de septiembre de 2026 contra el baseline y la planilla cerrada: 180/180 y 60/60 identificadores coincidieron con las selecciones reproducidas, el control fue un subconjunto de la auditoría y cada año aportó 30 y 10 registros respectivamente. Esta coincidencia se refiere exclusivamente a la pertenencia muestral; la doble revisión de los 60 registros presentó cinco desacuerdos, conservados sin adjudicación.
 
 ## Alcance de la apertura
 
@@ -54,7 +54,7 @@ La publicación permite recomputar las métricas agregadas y auditar el diseño 
 
 DOI conceptual: https://doi.org/10.5281/zenodo.22134990
 
-DOI de la versión archivada `v1.2-paper3`: https://doi.org/10.5281/zenodo.22240577
+Los DOI específicos de cada versión se encuentran en el historial del registro conceptual de Zenodo.
 
 ## Historial
 
