@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "verified_against_restricted_closed_workbook",
+  "verification_date": "2026-09-03",
+  "release_scope": "main_after_v1.2-paper3; candidate_for_next_archived_release",
+  "population": {
+    "target": "closed_corpus_1910_1915",
+    "records": 1438,
+    "strata_variable": "anio_libro",
+    "strata_sizes": {
+      "1910": 155,
+      "1911": 182,
+      "1912": 183,
+      "1913": 246,
+      "1914": 317,
+      "1915": 355
+    }
+  },
+  "sampling_frame": {
+    "restricted_file": "base_restringida_prevalidacion_v1.csv",
+    "row_order": "frozen_file_order",
+    "records": 1438,
+    "commitment_sha256": "adccf9d56815876f6da7b2653c6991985f1f9d9f7a274e0422f1b3142cb2ebc7"
+  },
+  "assisted_audit": {
+    "records": 180,
+    "allocation": "30_without_replacement_per_year",
+    "algorithm": "pandas.DataFrame.sample",
+    "replace": false,
+    "base_seed": 20260822,
+    "seed_formula": "20260822 + int(anio_libro)",
+    "seeds_by_year": {
+      "1910": 20262732,
+      "1911": 20262733,
+      "1912": 20262734,
+      "1913": 20262735,
+      "1914": 20262736,
+      "1915": 20262737
+    },
+    "post_selection_order": [
+      "anio_libro",
+      "numero_hoja",
+      "nro_orden"
+    ],
+    "na_position": "last",
+    "membership_commitment_sha256": "0394ef26c0e392977935c0e434802453c259467913d6137880133de1c80ee71b"
+  },
+  "independent_control": {
+    "records": 60,
+    "nested_in": "assisted_audit",
+    "allocation": "10_without_replacement_per_year_within_sorted_assisted_audit",
+    "algorithm": "pandas.DataFrame.sample",
+    "replace": false,
+    "base_seed": 20260822,
+    "seed_formula": "20260822 + 10000 + int(anio_libro)",
+    "seeds_by_year": {
+      "1910": 20272732,
+      "1911": 20272733,
+      "1912": 20272734,
+      "1913": 20272735,
+      "1914": 20272736,
+      "1915": 20272737
+    },
+    "membership_commitment_sha256": "354e8985458757e29d5014db09d4c6b23f8ee77814f75b62392352ae13b09c89"
+  },
+  "software_environment": {
+    "python": "3.13.15",
+    "pandas": "2.2.3",
+    "numpy": "2.1.3"
+  },
+  "commitment_canonicalization": {
+    "fields": [
+      "anio_libro",
+      "id_registro"
+    ],
+    "membership_order": "sort_by_anio_libro_then_id_registro",
+    "frame_order": "preserve_frozen_file_order",
+    "serialization": "json.dumps(ensure_ascii=True, sort_keys=True, separators=(',', ':'))",
+    "encoding": "utf-8",
+    "digest": "sha256"
+  },
+  "privacy": {
+    "public_membership_ids": false,
+    "public_row_level_records": false,
+    "rationale": "The public commitments verify an entire authorized sampling frame or membership set without publishing individual identifiers, folio locations, names or addresses."
+  }
+}
