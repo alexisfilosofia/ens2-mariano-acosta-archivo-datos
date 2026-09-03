@@ -46,6 +46,21 @@ python paper3_metodos/reproducibility/verify_sampling.py \
 
 El verificador reproduce ambas selecciones y las compara con compromisos SHA-256 públicos del marco ordenado y de las dos membresías. Los compromisos certifican el conjunto completo, pero no revelan qué registros fueron seleccionados. La rama `main` fue contrastada el 3 de septiembre de 2026 contra el baseline y la planilla cerrada: 180/180 y 60/60 identificadores coincidieron con las selecciones reproducidas, el control fue un subconjunto de la auditoría y cada año aportó 30 y 10 registros respectivamente. Esta coincidencia se refiere exclusivamente a la pertenencia muestral; la doble revisión de los 60 registros presentó cinco desacuerdos, conservados sin adjudicación.
 
+## Evaluación del tamiz automático de consistencia
+
+El cruce a nivel de registro entre las banderas previas a la corrección y la auditoría asistida de 180 casos produjo 2 verdaderos positivos, 3 falsos positivos, 47 falsos negativos y 128 verdaderos negativos. La sensibilidad fue 4,08%, la especificidad 97,71%, el valor predictivo positivo 40,00% y el valor predictivo negativo 73,14%. Las estimaciones descriptivas ponderadas por la composición anual fueron 3,95%, 98,21%, 47,75% y 71,14%, respectivamente.
+
+Las reglas funcionan como un tamiz selectivo de anomalías formalizadas, no como un detector general de discrepancias ni como sustituto de la lectura humana. Solo cinco registros muestreados tenían bandera automática, por lo que el valor predictivo positivo debe interpretarse con cautela.
+
+La salida agregada está en `outputs/qa_screening_summary.csv`. Una auditoría autorizada puede regenerarla sin exponer identificadores:
+
+```bash
+python paper3_metodos/reproducibility/evaluate_qa_screening.py \
+  /ruta/base_restringida_prevalidacion_v1.csv \
+  /ruta/discrepancias_validacion_independiente_final.csv \
+  /tmp/qa_screening_summary.csv
+```
+
 ## Alcance de la apertura
 
 La publicación permite recomputar las métricas agregadas y auditar el diseño muestral. La reproducción exacta de la pertenencia requiere acceso autorizado al marco y a las planillas cerradas; no se publican registros, localizadores ni identificadores fila por fila. Esta distinción evita presentar la reproducibilidad computacional pública como si equivaliera a acceso abierto a documentación personal histórica.
