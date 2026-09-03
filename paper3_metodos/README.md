@@ -1,6 +1,7 @@
 # Paper 3: materiales metodológicos reproducibles
 
-Versión científica: `v1.2-paper3`
+Versión científica archivada: `v1.2-paper3`  
+Estado de la rama `main`: incorpora una auditoría adicional del diseño muestral, candidata a la próxima release archivada.
 
 **Del folio a la evidencia: un protocolo reproducible para registros escolares manuscritos**
 
@@ -18,18 +19,42 @@ ORCID: https://orcid.org/0009-0007-8671-9823
 
 Los desacuerdos humanos se conservan como tales; no se fusionan A y B en una referencia única. Los datos individuales, direcciones exactas, coordenadas, imágenes y discrepancias fila por fila permanecen restringidos.
 
-## Reproducibilidad
+## Reproducibilidad de las métricas agregadas
 
 ```bash
 python -m pip install -r paper3_metodos/reproducibility/requirements.txt
 jupyter nbconvert --to notebook --execute paper3_metodos/notebooks/paper3_reproducibility.ipynb --output /tmp/paper3_reproducibility_executed.ipynb
 ```
 
+## Reproducibilidad del muestreo
+
+El diseño completo está declarado en `reproducibility/sampling_design.json`. La auditoría asistida se obtuvo mediante muestreo simple sin reemplazo dentro de cada año, con 30 registros por estrato y semilla `20260822 + año`. El control no prellenado se seleccionó dentro de esa muestra ya ordenada, con 10 registros por año y semilla `20260822 + 10000 + año`.
+
+La verificación pública de la coherencia del diseño no requiere datos restringidos:
+
+```bash
+python paper3_metodos/reproducibility/verify_sampling.py
+```
+
+Una auditoría autorizada puede verificar también la pertenencia exacta, sin imprimir identificadores individuales:
+
+```bash
+python paper3_metodos/reproducibility/verify_sampling.py \
+  --baseline /ruta/base_restringida_prevalidacion_v1.csv \
+  --closed-workbook /ruta/plantillas_validacion_manual_cerrada_v1.xlsm
+```
+
+El verificador reproduce ambas selecciones y las compara con compromisos SHA-256 públicos del marco ordenado y de las dos membresías. Los compromisos certifican el conjunto completo, pero no revelan qué registros fueron seleccionados. La rama `main` fue contrastada el 3 de septiembre de 2026 contra el baseline y la planilla cerrada: 180/180 y 60/60 identificadores coincidieron, el control fue un subconjunto de la auditoría y cada año aportó 30 y 10 registros respectivamente.
+
+## Alcance de la apertura
+
+La publicación permite recomputar las métricas agregadas y auditar el diseño muestral. La reproducción exacta de la pertenencia requiere acceso autorizado al marco y a las planillas cerradas; no se publican registros, localizadores ni identificadores fila por fila. Esta distinción evita presentar la reproducibilidad computacional pública como si equivaliera a acceso abierto a documentación personal histórica.
+
 ## DOI
 
 DOI conceptual: https://doi.org/10.5281/zenodo.22134990
 
-DOI de versión `v1.2-paper3`: https://doi.org/10.5281/zenodo.22240577
+DOI de la versión archivada `v1.2-paper3`: https://doi.org/10.5281/zenodo.22240577
 
 ## Historial
 

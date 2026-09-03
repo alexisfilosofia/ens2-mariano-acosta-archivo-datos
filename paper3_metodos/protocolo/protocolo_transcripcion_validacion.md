@@ -26,15 +26,23 @@ Un `IDEM` expandido correctamente al valor heredado no es un error. El contrato 
 
 En la muestra auditada se evaluaron 398 marcas de repetición/IDEM y 397 fueron resueltas correctamente por el pipeline.
 
+## Diseño de muestreo verificable
+
+La población objetivo es el corpus cerrado de 1.438 registros. Se utilizó `pandas.DataFrame.sample` 2.2.3 para realizar muestreo simple pseudoaleatorio sin reemplazo dentro de cada año. La auditoría asistida seleccionó 30 registros por año mediante la semilla `20260822 + año`. Luego se ordenó la muestra por año, número de hoja y número de orden, con faltantes al final. Sobre esa secuencia se seleccionaron 10 registros por año para el control no prellenado, mediante la semilla `20260822 + 10000 + año`. Por lo tanto, el control de 60 está anidado en la muestra de 180.
+
+La asignación uniforme asegura cobertura de los seis años, pero no reproduce la composición anual del corpus. Las estimaciones poblacionales utilizan ponderación por los tamaños conocidos de los estratos. Los tamaños de 30 y 10 casos por año se definieron por cobertura temporal y carga de revisión viable, no mediante un cálculo de potencia a priori.
+
+El archivo `reproducibility/sampling_design.json` registra las semillas por año, el orden del marco, el entorno de software y tres compromisos SHA-256: uno para la secuencia completa del marco restringido y uno para cada membresía. Su canonicalización usa únicamente `anio_libro` e `id_registro`; los compromisos se publican como un único resumen criptográfico y no exponen la lista de identificadores. El 3 de septiembre de 2026 se reprodujeron ambas selecciones contra el baseline prevalidación y la planilla cerrada: coincidieron los 180 registros de la auditoría y los 60 del control; este último quedó confirmado como subconjunto exacto del primero.
+
 ## Validación independiente
 
-La muestra independiente contiene 180 registros y 1.980 comparaciones conceptuales. La validación compara salidas estructuradas y resueltas contra revisión humana, con una métrica agregada de concordancia semántica/resuelta.
+La muestra asistida contiene 180 registros y 1.980 comparaciones conceptuales. Sus valores del pipeline estaban prellenados para el cotejo humano, por lo que el 94,29% informado describe una auditoría `human-in-the-loop` y no una lectura ciega.
 
-La doble revisión documentada cubre 60 registros y 1.080 comparaciones sustantivas, con 1.075 acuerdos exactos entre revisores independientes (99,54%). Los cinco desacuerdos humanos se conservan como tales y no se adjudican en una referencia única.
+El control no prellenado cubre 60 registros y 1.080 comparaciones sustantivas. Dos revisores leyeron los mismos folios de manera independiente, sin consultar el baseline ni la respuesta del otro. Se observaron 1.075 acuerdos exactos entre revisores (99,54%). Los cinco desacuerdos humanos se conservan como tales y no se adjudican en una referencia única. El baseline se compara por separado contra A y contra B.
 
 ## Qué se publica
 
-La release pública incluye:
+La rama pública incluye:
 
 - tablas agregadas de validación;
 - concordancia por campo;
@@ -43,6 +51,8 @@ La release pública incluye:
 - acuerdo agregado entre revisores;
 - resumen del bootstrap;
 - notebook reproducible sanitizado;
+- especificación y verificador del muestreo;
+- compromisos SHA-256 del marco y las membresías restringidas;
 - manifiesto de hashes;
 - notas de release.
 
@@ -58,8 +68,8 @@ La release excluye:
 - planillas completas de validación;
 - discrepancias fila por fila;
 - bases restringidas;
-- identificadores que permitan reconstruir personas concretas.
+- listas de pertenencia o identificadores fila por fila.
 
 ## Interpretación
 
-Las métricas publicadas no son CER, WER ni accuracy de un motor HTR. La concordancia reportada corresponde al resultado agregado del pipeline completo bajo reglas explícitas de resolución contextual, normalización y validación humana.
+Las métricas publicadas no son CER, WER ni accuracy de un motor HTR. La concordancia reportada corresponde al resultado agregado del pipeline completo bajo reglas explícitas de resolución contextual, normalización y validación humana. La reproducibilidad pública alcanza el código, las métricas agregadas, el diseño y los compromisos criptográficos; la verificación de la pertenencia exacta requiere acceso autorizado a los insumos restringidos.
