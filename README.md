@@ -4,11 +4,11 @@ Repositorio público de investigación y divulgación del Archivo Escolar de la 
 
 ## Paper 3
 
-Los materiales metodológicos reproducibles están en `paper3_metodos/`. La versión científica es `v1.2-paper3`.
+Los materiales metodológicos reproducibles están en `paper3_metodos/`. La versión científica vigente es `v1.3.1-paper3`.
 
 DOI conceptual: https://doi.org/10.5281/zenodo.22134990
 
-DOI de versión v1.2: https://doi.org/10.5281/zenodo.22240577
+Los DOI específicos de cada versión se encuentran en el historial de Zenodo.
 
 ## Privacidad
 
