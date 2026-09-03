@@ -1,0 +1,3 @@
+alcance,tp,fp,fn,tn,sensibilidad,especificidad,valor_predictivo_positivo,valor_predictivo_negativo,tasa_banderas,tasa_registros_con_discrepancia,nota
+muestra_180_no_ponderada,2.000000,3.000000,47.000000,128.000000,0.040816,0.977099,0.400000,0.731429,0.027778,0.272222,Unidad de clasificación: registro; positivo humano = al menos una discrepancia sustantiva en 11 dimensiones
+estimacion_ponderada_composicion_anual,16.633333,18.200000,404.966667,998.200000,0.039453,0.982094,0.477512,0.711391,0.024223,0.293185,Conteos expandidos descriptivos mediante pesos N_anio/30; no son observaciones enteras
