@@ -61,6 +61,22 @@ python paper3_metodos/reproducibility/evaluate_qa_screening.py \
   /tmp/qa_screening_summary.csv
 ```
 
+## Sensibilidad a las reglas de equivalencia
+
+La concordancia principal se evaluó además con seis comparadores anidados y deterministas. El criterio resuelto y tipado pero estricto en grafía produjo 1.841/1.980 = 92,98% (93,05% ponderado); el comparador principal completo reprodujo 1.867/1.980 = 94,29% (94,41% ponderado). La diferencia total fue de 26 coincidencias, equivalentes a 1,31 puntos porcentuales: 11 provinieron de la normalización formal, 13 del diccionario cerrado de nacionalidades y 2 de la canonización del curso.
+
+Las reglas completas están versionadas en `reproducibility/equivalence_rules_v1.json`. Las resoluciones de IDEM, las fechas resueltas, la equivalencia numérica de edad y el tratamiento de faltantes permanecieron invariantes porque forman parte del contrato histórico evaluado. Una auditoría autorizada puede reproducir solo salidas agregadas:
+
+```bash
+python paper3_metodos/reproducibility/evaluate_equivalence_sensitivity.py \
+  /ruta/base_restringida_prevalidacion_v1.csv \
+  /ruta/plantillas_validacion_manual_cerrada_v1.xlsm \
+  /tmp/equivalence_sensitivity_summary.csv \
+  /tmp/equivalence_sensitivity_by_field.csv
+```
+
+Las salidas públicas agregadas se encuentran en `outputs/equivalence_sensitivity_summary.csv` y `outputs/equivalence_sensitivity_by_field.csv`. El diccionario de nacionalidades es cerrado y específico de este corpus; no constituye una ontología universal ni debe trasladarse a otros períodos o instituciones sin nueva justificación documental.
+
 ## Alcance de la apertura
 
 La publicación permite recomputar las métricas agregadas y auditar el diseño muestral. La reproducción exacta de la pertenencia requiere acceso autorizado al marco y a las planillas cerradas; no se publican registros, localizadores ni identificadores fila por fila. Esta distinción evita presentar la reproducibilidad computacional pública como si equivaliera a acceso abierto a documentación personal histórica.
