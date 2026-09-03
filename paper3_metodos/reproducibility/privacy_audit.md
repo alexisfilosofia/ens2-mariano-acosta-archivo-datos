@@ -1,11 +1,12 @@
-# Privacy audit for `v1.2-paper3` and the post-v1.2 sampling addendum
+# Privacy audit for `v1.3.1-paper3`
 
 Initial audit date: 2026-09-01  
-Sampling addendum audit date: 2026-09-03
+Sampling addendum audit date: 2026-09-03  
+Maintenance metadata audit date: 2026-09-03
 
 ## Scope
 
-The initial audit scanned the repository's 24 text-based files after applying the v1.2 patch and before publishing `v1.2-paper3`. The addendum reviewed the 26 text-based files expected on `main` after adding the public sampling specification and verifier.
+The initial audit scanned the repository's 24 text-based files before publishing `v1.2-paper3`. The v1.3 sampling addendum reviewed the 26 text-based files on `main` after adding the public sampling specification and verifier. The v1.3.1 maintenance review aligned version metadata without adding row-level material.
 
 ## Automated checks
 
@@ -30,4 +31,4 @@ Allowed proper names present in the public materials are Alexis Marcelo Perissé
 
 Result: no privacy findings. No student/tutor names, row-level addresses, individual coordinates, archival images, restricted validation sheets, Drive IDs, local user paths, credentials, row-level discrepancies or membership lists are included. The baseline, closed workbook and the mapping between deterministic internal identifiers and documentary locations remain restricted.
 
-The SHA-256 manifest is regenerated after the addendum files are finalized and before the next archived release.
+The SHA-256 manifest was regenerated after the v1.3.1 maintenance files were finalized.
