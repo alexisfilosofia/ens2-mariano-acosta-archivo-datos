@@ -1,0 +1,7 @@
+escenario,coincidencias,discrepancias,comparaciones,concordancia_pct,concordancia_ponderada_pct,diferencia_coincidencias_vs_principal,diferencia_pp_vs_principal
+estricto_resuelto_tipado,1841,139,1980,92.9798,93.0539,-26,-1.3131
+minusculas_y_espacios,1850,130,1980,93.4343,93.5162,-17,-0.8586
+normalizacion_formal,1852,128,1980,93.5354,93.6216,-15,-0.7576
+principal_sin_recodificacion_nacionalidad,1854,126,1980,93.6364,93.7211,-13,-0.6566
+principal_sin_canonizacion_curso,1865,115,1980,94.1919,94.3088,-2,-0.101
+principal_reportado,1867,113,1980,94.2929,94.4083,0,0.0
