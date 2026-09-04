@@ -77,6 +77,24 @@ python paper3_metodos/reproducibility/evaluate_equivalence_sensitivity.py \
 
 Las salidas públicas agregadas se encuentran en `outputs/equivalence_sensitivity_summary.csv` y `outputs/equivalence_sensitivity_by_field.csv`. El diccionario de nacionalidades es cerrado y específico de este corpus; no constituye una ontología universal ni debe trasladarse a otros períodos o instituciones sin nueva justificación documental.
 
+## Sensibilidad a la dependencia por folio
+
+La muestra asistida reúne 180 registros pertenecientes a 49 folios observados, con entre 5 y 12 folios por estrato anual. El intervalo principal continúa siendo el bootstrap estratificado por registro porque reproduce el mecanismo efectivo de selección. Como sensibilidad model-based, se remuestrearon con reemplazo los folios completos dentro de cada año en 5.000 réplicas con semilla `20260904`.
+
+La estimación puntual ponderada permaneció en 94,41%. El IC95% pasó de 92,70%-95,98% en el bootstrap por registro a 91,25%-97,02% en el bootstrap documental. Una linealización robusta por folio estimó un error estándar de 1,67 puntos porcentuales, una razón de errores estándar de 1,97 y un efecto de diseño aproximado de 3,88. La eliminación sucesiva de un folio produjo estimaciones entre 93,72% y 96,03%.
+
+Una auditoría autorizada puede regenerar únicamente resultados agregados:
+
+```bash
+python paper3_metodos/reproducibility/evaluate_folio_dependence.py \
+  /ruta/base_restringida_prevalidacion_v1.csv \
+  /ruta/plantillas_validacion_manual_cerrada_v1.xlsm \
+  /tmp/folio_dependence_summary.csv \
+  /tmp/folio_dependence_by_year.csv
+```
+
+Las salidas públicas son `outputs/folio_dependence_summary.csv` y `outputs/folio_dependence_by_year.csv`. Este análisis no convierte retrospectivamente el diseño en un muestreo por conglomerados ni identifica causas físicas o paleográficas de la heterogeneidad.
+
 ## Alcance de la apertura
 
 La publicación permite recomputar las métricas agregadas y auditar el diseño muestral. La reproducción exacta de la pertenencia requiere acceso autorizado al marco y a las planillas cerradas; no se publican registros, localizadores ni identificadores fila por fila. Esta distinción evita presentar la reproducibilidad computacional pública como si equivaliera a acceso abierto a documentación personal histórica.
