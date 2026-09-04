@@ -1,0 +1,6 @@
+analysis,sampling_unit,point_estimate_pct,ci95_lower_pct,ci95_upper_pct,replicates,seed,interpretation,cluster_robust_se_pct,design_effect_vs_iid,se_ratio_vs_iid
+bootstrap_estratificado_registro_publicado,registro,94.40826906056392,92.70130547477557,95.9822565010326,5000,20260827,intervalo principal; reproduce el diseño de selección por registro,,,
+bootstrap_documental_por_folio,folio dentro de año,94.40826906056392,91.25042262247997,97.0178574984497,5000,20260904,sensibilidad model-based; conserva juntos los registros de cada folio,,,
+linealizacion_robusta_por_folio_CR1,folio dentro de año,94.40826906056392,91.12675755912547,97.68978056200237,0,,sensibilidad asintótica normal; no reemplaza el intervalo principal,1.67424056195839,3.880814172662667,1.9699782162914052
+influencia_eliminando_un_folio_minimo,folio,93.71579983178219,,,0,,"año 1912; diagnóstico de influencia, no IC",,,
+influencia_eliminando_un_folio_maximo,folio,96.0296195308592,,,0,,"año 1912; diagnóstico de influencia, no IC",,,

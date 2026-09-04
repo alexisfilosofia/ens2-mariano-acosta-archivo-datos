@@ -46,6 +46,55 @@ python paper3_metodos/reproducibility/verify_sampling.py \
 
 El verificador reproduce ambas selecciones y las compara con compromisos SHA-256 públicos del marco ordenado y de las dos membresías. Los compromisos certifican el conjunto completo, pero no revelan qué registros fueron seleccionados. La rama `main` fue contrastada el 3 de septiembre de 2026 contra el baseline y la planilla cerrada: 180/180 y 60/60 identificadores coincidieron con las selecciones reproducidas, el control fue un subconjunto de la auditoría y cada año aportó 30 y 10 registros respectivamente. Esta coincidencia se refiere exclusivamente a la pertenencia muestral; la doble revisión de los 60 registros presentó cinco desacuerdos, conservados sin adjudicación.
 
+## Evaluación del tamiz automático de consistencia
+
+El cruce a nivel de registro entre las banderas previas a la corrección y la auditoría asistida de 180 casos produjo 2 verdaderos positivos, 3 falsos positivos, 47 falsos negativos y 128 verdaderos negativos. La sensibilidad fue 4,08%, la especificidad 97,71%, el valor predictivo positivo 40,00% y el valor predictivo negativo 73,14%. Las estimaciones descriptivas ponderadas por la composición anual fueron 3,95%, 98,21%, 47,75% y 71,14%, respectivamente.
+
+Las reglas funcionan como un tamiz selectivo de anomalías formalizadas, no como un detector general de discrepancias ni como sustituto de la lectura humana. Solo cinco registros muestreados tenían bandera automática, por lo que el valor predictivo positivo debe interpretarse con cautela.
+
+La salida agregada está en `outputs/qa_screening_summary.csv`. Una auditoría autorizada puede regenerarla sin exponer identificadores:
+
+```bash
+python paper3_metodos/reproducibility/evaluate_qa_screening.py \
+  /ruta/base_restringida_prevalidacion_v1.csv \
+  /ruta/discrepancias_validacion_independiente_final.csv \
+  /tmp/qa_screening_summary.csv
+```
+
+## Sensibilidad a las reglas de equivalencia
+
+La concordancia principal se evaluó además con seis comparadores anidados y deterministas. El criterio resuelto y tipado pero estricto en grafía produjo 1.841/1.980 = 92,98% (93,05% ponderado); el comparador principal completo reprodujo 1.867/1.980 = 94,29% (94,41% ponderado). La diferencia total fue de 26 coincidencias, equivalentes a 1,31 puntos porcentuales: 11 provinieron de la normalización formal, 13 del diccionario cerrado de nacionalidades y 2 de la canonización del curso.
+
+Las reglas completas están versionadas en `reproducibility/equivalence_rules_v1.json`. Las resoluciones de IDEM, las fechas resueltas, la equivalencia numérica de edad y el tratamiento de faltantes permanecieron invariantes porque forman parte del contrato histórico evaluado. Una auditoría autorizada puede reproducir solo salidas agregadas:
+
+```bash
+python paper3_metodos/reproducibility/evaluate_equivalence_sensitivity.py \
+  /ruta/base_restringida_prevalidacion_v1.csv \
+  /ruta/plantillas_validacion_manual_cerrada_v1.xlsm \
+  /tmp/equivalence_sensitivity_summary.csv \
+  /tmp/equivalence_sensitivity_by_field.csv
+```
+
+Las salidas públicas agregadas se encuentran en `outputs/equivalence_sensitivity_summary.csv` y `outputs/equivalence_sensitivity_by_field.csv`. El diccionario de nacionalidades es cerrado y específico de este corpus; no constituye una ontología universal ni debe trasladarse a otros períodos o instituciones sin nueva justificación documental.
+
+## Sensibilidad a la dependencia por folio
+
+La muestra asistida reúne 180 registros pertenecientes a 49 folios observados, con entre 5 y 12 folios por estrato anual. El intervalo principal continúa siendo el bootstrap estratificado por registro porque reproduce el mecanismo efectivo de selección. Como sensibilidad model-based, se remuestrearon con reemplazo los folios completos dentro de cada año en 5.000 réplicas con semilla `20260904`.
+
+La estimación puntual ponderada permaneció en 94,41%. El IC95% pasó de 92,70%-95,98% en el bootstrap por registro a 91,25%-97,02% en el bootstrap documental. Una linealización robusta por folio estimó un error estándar de 1,67 puntos porcentuales, una razón de errores estándar de 1,97 y un efecto de diseño aproximado de 3,88. La eliminación sucesiva de un folio produjo estimaciones entre 93,72% y 96,03%.
+
+Una auditoría autorizada puede regenerar únicamente resultados agregados:
+
+```bash
+python paper3_metodos/reproducibility/evaluate_folio_dependence.py \
+  /ruta/base_restringida_prevalidacion_v1.csv \
+  /ruta/plantillas_validacion_manual_cerrada_v1.xlsm \
+  /tmp/folio_dependence_summary.csv \
+  /tmp/folio_dependence_by_year.csv
+```
+
+Las salidas públicas son `outputs/folio_dependence_summary.csv` y `outputs/folio_dependence_by_year.csv`. Este análisis no convierte retrospectivamente el diseño en un muestreo por conglomerados ni identifica causas físicas o paleográficas de la heterogeneidad.
+
 ## Alcance de la apertura
 
 La publicación permite recomputar las métricas agregadas y auditar el diseño muestral. La reproducción exacta de la pertenencia requiere acceso autorizado al marco y a las planillas cerradas; no se publican registros, localizadores ni identificadores fila por fila. Esta distinción evita presentar la reproducibilidad computacional pública como si equivaliera a acceso abierto a documentación personal histórica.
