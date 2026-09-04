@@ -1,7 +1,7 @@
 # Paper 3: materiales metodológicos reproducibles
 
-Versión científica archivada: `v1.3.1-paper3`  
-Estado de la rama `main`: alineado con la auditoría de muestreo y los metadatos de la versión archivada.
+Versión científica archivada: `v1.4-paper3`  
+Estado de la rama `main`: alineado con la auditoría integral, los análisis de sensibilidad y los metadatos de la versión archivada.
 
 **Del folio a la evidencia: un protocolo reproducible para registros escolares manuscritos**
 
