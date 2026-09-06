@@ -1,8 +1,12 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "status": "verified_against_restricted_closed_workbook",
   "verification_date": "2026-09-03",
-  "release_scope": "v1.3.1-paper3",
+  "release_scope": {
+    "design_introduced_in": "v1.3-paper3",
+    "last_archived_release_verified_unchanged": "v1.4-paper3",
+    "design_changed_since_initial_verification": false
+  },
   "population": {
     "target": "closed_corpus_1910_1915",
     "records": 1438,
