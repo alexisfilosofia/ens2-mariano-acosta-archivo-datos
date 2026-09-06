@@ -1,7 +1,7 @@
 # Paper 3: materiales metodológicos reproducibles
 
 Versión científica archivada: `v1.4-paper3`  
-Estado de la rama `main`: alineado con la auditoría integral, los análisis de sensibilidad y los metadatos de la versión archivada.
+La release citada es una instantánea inmutable; el desarrollo posterior de `main` no modifica su contenido.
 
 **Del folio a la evidencia: un protocolo reproducible para registros escolares manuscritos**
 
@@ -20,6 +20,7 @@ La documentación pública permite revisar:
 - la evaluación del tamiz automático de consistencia;
 - los análisis de sensibilidad;
 - la dependencia documental por folio;
+- la auditoría retrospectiva de propagación contextual;
 - la política de apertura, privacidad y trazabilidad.
 
 Los resultados científicos detallados, su interpretación y su discusión pertenecen al manuscrito y a las versiones científicas archivadas correspondientes.
@@ -98,6 +99,20 @@ python paper3_metodos/reproducibility/evaluate_folio_dependence.py \
 
 Las salidas públicas son `outputs/folio_dependence_summary.csv` y `outputs/folio_dependence_by_year.csv`. Este análisis no convierte retrospectivamente el diseño en un muestreo por conglomerados ni identifica causas físicas o paleográficas de la heterogeneidad.
 
+## Auditoría retrospectiva de propagación contextual
+
+El script público `reproducibility/evaluate_contextual_propagation.py` reconstruye el universo de valores contextuales iguales al registro precedente dentro del mismo folio y clasifica únicamente los sitios pertenecientes a la auditoría asistida. El script requiere el baseline congelado y la planilla cerrada, pero emite solo conteos agregados: no imprime ni guarda identificadores, localizadores documentales, valores o clasificaciones fila por fila.
+
+```bash
+python paper3_metodos/reproducibility/evaluate_contextual_propagation.py \
+  --baseline /ruta/base_restringida_prevalidacion_v1.csv \
+  --closed-workbook /ruta/plantillas_validacion_manual_cerrada_v1.xlsm \
+  --output /tmp/contextual_propagation_summary.csv \
+  --check-canonical
+```
+
+La salida pública canónica está en `outputs/contextual_propagation_summary.csv`. Los sitios inventariados son candidatos de repetición adyacente, no errores inferidos ni marcas paleográficas clasificadas sin consulta de la fuente.
+
 ## Alcance de la apertura
 
 La publicación permite recomputar métricas agregadas y auditar el diseño muestral. La reproducción exacta de la pertenencia requiere acceso autorizado al marco y a las planillas cerradas; no se publican registros, localizadores ni identificadores fila por fila.
@@ -112,7 +127,7 @@ Los datos individuales, direcciones exactas, coordenadas, imágenes y discrepanc
 
 DOI conceptual: https://doi.org/10.5281/zenodo.22134990
 
-Los DOI específicos de cada versión se encuentran en el historial del registro conceptual de Zenodo.
+Para reproducir una instantánea exacta debe citarse el DOI específico de esa versión. El DOI conceptual identifica la familia completa y permite localizar su historial.
 
 ## Historial
 
