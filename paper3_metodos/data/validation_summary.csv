@@ -1,6 +1,6 @@
 metric,value,unit,public_reproducibility,note
 corpus_total,1438,records,documented_aggregate,Total records in the 1910-1915 corpus.
-independent_sample,180,records,documented_aggregate,Assisted audit sample; 30 records per year.
+assisted_audit_sample,180,records,documented_aggregate,Assisted audit sample with prefilled pipeline values; 30 records per year.
 conceptual_comparisons,1980,comparisons,recomputed_from_public_tables,180 records times 11 conceptual fields.
 matches,1867,comparisons,recomputed_from_public_tables,Semantic/resolved matches.
 semantic_resolved_agreement,94.29,percent,recomputed_from_public_tables,Matches divided by conceptual comparisons.

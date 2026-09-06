@@ -11,7 +11,7 @@ El trabajo implementa y documenta un flujo de datos que incluye:
 - estructuración y normalización de registros documentales históricos;
 - reglas explícitas de validación y control de calidad;
 - trazabilidad y versionado de decisiones metodológicas;
-- muestreo reproducible y auditoría humana independiente;
+- muestreo reproducible, auditoría asistida y control humano no prellenado;
 - evaluación cuantitativa de reglas automáticas de consistencia;
 - análisis de sensibilidad de criterios de equivalencia;
 - análisis de dependencia documental por folio;
@@ -66,7 +66,7 @@ Para auditorías autorizadas, los verificadores admiten las bases restringidas c
 La versión metodológica vigente documenta, entre otros controles:
 
 - auditoría asistida sobre una muestra estratificada;
-- control independiente no prellenado;
+- control no prellenado con doble lectura separada;
 - acuerdo interrevisor;
 - resolución controlada de marcas `IDEM`;
 - evaluación del tamiz automático de consistencia;
