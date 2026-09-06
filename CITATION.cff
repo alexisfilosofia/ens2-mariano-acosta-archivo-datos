@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use these reproducible methodological materials, please cite the archived release identified below."
+message: "Cite the exact archived release with the version-specific DOI below; the concept DOI is retained as a related identifier for the version family."
 title: "Del folio a la evidencia: materiales reproducibles para la validación de registros escolares manuscritos"
 type: dataset
 authors:
@@ -9,7 +9,11 @@ authors:
 version: "1.4"
 date-released: "2026-09-04"
 year: 2026
-doi: "10.5281/zenodo.22134990"
+doi: "10.5281/zenodo.22321395"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22134990"
+    description: "Concept DOI for the complete version family"
 url: "https://github.com/alexisfilosofia/ens2-mariano-acosta-archivo-datos"
 repository-code: "https://github.com/alexisfilosofia/ens2-mariano-acosta-archivo-datos"
 abstract: "Public aggregate reproducibility materials for a structured transcription, contextual resolution, normalization, QA, assisted audit, and independent human validation pipeline applied to handwritten school registration records from 1910-1915."
