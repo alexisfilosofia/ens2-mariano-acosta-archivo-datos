@@ -1,4 +1,4 @@
-# Privacy audit for `v1.4-paper3`
+# Privacy audit for `v1.4.1-paper3`
 
 Initial audit date: 2026-09-01  
 Sampling addendum audit date: 2026-09-03  
@@ -8,7 +8,7 @@ Blind-audit maintenance review date: 2026-09-06
 
 ## Scope
 
-The initial audit scanned the repository's 24 text-based files before publishing `v1.2-paper3`. The v1.3 sampling addendum reviewed the 26 text-based files on `main` after adding the public sampling specification and verifier. The v1.3.1 maintenance review aligned version metadata without adding row-level material. The v1.4 review added only aggregate QA-screening, historical-equivalence and folio-dependence outputs plus reproducibility scripts that require authorized restricted inputs and do not emit row-level records. The post-v1.4 maintenance review adds an aggregate contextual-propagation verifier and canonical summary; it was tested against authorized restricted inputs and emits no identifiers, values, folio locations or row-level classifications.
+The initial audit scanned the repository's 24 text-based files before publishing `v1.2-paper3`. The v1.3 sampling addendum reviewed the 26 text-based files on `main` after adding the public sampling specification and verifier. The v1.3.1 maintenance review aligned version metadata without adding row-level material. The v1.4 review added only aggregate QA-screening, historical-equivalence and folio-dependence outputs plus reproducibility scripts that require authorized restricted inputs and do not emit row-level records. The v1.4.1 maintenance review adds an aggregate contextual-propagation verifier and canonical summary; it was tested against authorized restricted inputs and emits no identifiers, values, folio locations or row-level classifications.
 
 ## Automated checks
 
@@ -33,4 +33,4 @@ Allowed proper names present in the public materials are Alexis Marcelo Perissé
 
 Result: no privacy findings. No student/tutor names, row-level addresses, individual coordinates, archival images, restricted validation sheets, Drive IDs, local user paths, credentials, row-level discrepancies or membership lists are included. The baseline, closed workbook and the mapping between deterministic internal identifiers and documentary locations remain restricted.
 
-The SHA-256 manifest is regenerated whenever release-candidate files change. The contextual-propagation verifier and its aggregate output were included in the post-v1.4 maintenance review.
+The SHA-256 manifest is regenerated whenever release-candidate files change. The contextual-propagation verifier and its aggregate output were included in the v1.4.1 maintenance review.

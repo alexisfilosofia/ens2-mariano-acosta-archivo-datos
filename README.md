@@ -23,7 +23,7 @@ El trabajo implementa y documenta un flujo de datos que incluye:
 
 - **Período:** 1910–1915.
 - **Corpus canónico:** 1.438 registros.
-- **Versión científica vigente:** `v1.4-paper3`.
+- **Versión científica vigente:** `v1.4.1-paper3`.
 - **Materiales metodológicos reproducibles:** `paper3_metodos/`.
 - **DOI conceptual:** https://doi.org/10.5281/zenodo.22134990
 
