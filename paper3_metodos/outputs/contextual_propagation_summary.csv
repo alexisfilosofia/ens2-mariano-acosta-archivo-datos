@@ -1,0 +1,10 @@
+indicator,value
+candidate_sites,2222
+records_with_candidate_sites,1280
+observed_contextual_sites,293
+confirmed_idem,226
+explicit_repetition,59
+explicit_repetition_matching,54
+explicit_repetition_discrepant,5
+absence,8
+unreviewed_candidate_sites,1929
