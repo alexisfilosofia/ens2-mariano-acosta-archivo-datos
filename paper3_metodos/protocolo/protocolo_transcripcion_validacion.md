@@ -38,7 +38,7 @@ El archivo `reproducibility/sampling_design.json` registra las semillas por año
 
 La muestra asistida contiene 180 registros y 1.980 comparaciones conceptuales. Sus valores del pipeline estaban prellenados para el cotejo humano, por lo que el 94,29% informado describe una auditoría `human-in-the-loop` y no una lectura ciega.
 
-El control no prellenado cubre 60 registros y 1.080 comparaciones sustantivas. Dos revisores leyeron los mismos folios por separado, sin consultar el baseline ni la respuesta del otro durante la tarea. Se observaron 1.075 acuerdos exactos entre revisores (99,54%). Los cinco desacuerdos humanos se conservan como tales y no se adjudican en una referencia única. El baseline se compara por separado contra A y contra B.
+El control no prellenado cubre 60 registros y 1.080 comparaciones sustantivas. Los revisores, designados A y B, leyeron los mismos folios por separado, sin consultar el baseline ni la respuesta del otro durante la tarea. En este protocolo, «independiente» designa únicamente esas condiciones de lectura y no una condición biográfica, institucional o externa respecto del proyecto. Se observaron 1.075 acuerdos exactos entre revisores (99,54%). Los cinco desacuerdos humanos se conservan como tales y no se adjudican en una referencia única. El baseline se compara por separado contra A y contra B.
 
 ## Qué se publica
 
