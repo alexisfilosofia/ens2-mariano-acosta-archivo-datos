@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Cite the exact version-specific DOI shown by Zenodo for v1.4.1-paper3; the related identifier below is the concept DOI for the complete version family."
+message: "Cite the exact archived release with the version-specific DOI below; the related identifier is the concept DOI for the complete version family."
 title: "Del folio a la evidencia: materiales reproducibles para la validación de registros escolares manuscritos"
 type: dataset
 authors:
@@ -9,6 +9,7 @@ authors:
 version: "1.4.1"
 date-released: "2026-09-06"
 year: 2026
+doi: "10.5281/zenodo.22545822"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.22134990"
