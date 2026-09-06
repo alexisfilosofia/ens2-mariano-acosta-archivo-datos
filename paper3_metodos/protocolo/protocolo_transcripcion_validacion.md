@@ -15,7 +15,7 @@ La unidad analítica pública es el registro de inscripción. La release cubre e
 3. Resolución contextual de marcas de repetición como `IDEM`.
 4. Normalización controlada de valores para análisis agregado.
 5. Control de calidad interno.
-6. Selección de muestra independiente estratificada.
+6. Selección de muestra estratificada para auditoría asistida.
 7. Validación humana contra la fuente restringida.
 8. Consolidación de métricas agregadas.
 9. Publicación de resultados reproducibles no identificables.
@@ -34,11 +34,11 @@ La asignación uniforme asegura cobertura de los seis años, pero no reproduce l
 
 El archivo `reproducibility/sampling_design.json` registra las semillas por año, el orden del marco, el entorno de software y tres compromisos SHA-256: uno para la secuencia completa del marco restringido y uno para cada membresía. Su canonicalización usa únicamente `anio_libro` e `id_registro`; los compromisos se publican como un único resumen criptográfico y no exponen la lista de identificadores. El 3 de septiembre de 2026 se reprodujeron ambas selecciones contra el baseline prevalidación y la planilla cerrada: coincidieron los 180 registros de la auditoría y los 60 del control; este último quedó confirmado como subconjunto exacto del primero.
 
-## Validación independiente
+## Auditoría asistida y control no prellenado
 
 La muestra asistida contiene 180 registros y 1.980 comparaciones conceptuales. Sus valores del pipeline estaban prellenados para el cotejo humano, por lo que el 94,29% informado describe una auditoría `human-in-the-loop` y no una lectura ciega.
 
-El control no prellenado cubre 60 registros y 1.080 comparaciones sustantivas. Dos revisores leyeron los mismos folios de manera independiente, sin consultar el baseline ni la respuesta del otro. Se observaron 1.075 acuerdos exactos entre revisores (99,54%). Los cinco desacuerdos humanos se conservan como tales y no se adjudican en una referencia única. El baseline se compara por separado contra A y contra B.
+El control no prellenado cubre 60 registros y 1.080 comparaciones sustantivas. Dos revisores leyeron los mismos folios por separado, sin consultar el baseline ni la respuesta del otro durante la tarea. Se observaron 1.075 acuerdos exactos entre revisores (99,54%). Los cinco desacuerdos humanos se conservan como tales y no se adjudican en una referencia única. El baseline se compara por separado contra A y contra B.
 
 ## Qué se publica
 
