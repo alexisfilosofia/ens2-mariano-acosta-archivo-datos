@@ -1,6 +1,6 @@
 # Paper 3: materiales metodológicos reproducibles
 
-Versión científica archivada: `v1.4-paper3`  
+Versión científica archivada: `v1.4.1-paper3`  
 La release citada es una instantánea inmutable; el desarrollo posterior de `main` no modifica su contenido.
 
 **Del folio a la evidencia: un protocolo reproducible para registros escolares manuscritos**
