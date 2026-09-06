@@ -1,6 +1,6 @@
 # CHANGELOG
 
-- Próxima versión de mantenimiento: corrige la nomenclatura de la auditoría asistida, explicita la procedencia estable del diseño muestral, distingue el DOI específico del DOI conceptual y agrega un verificador público agregado para la propagación contextual. La caracterización no identificable de los dos revisores se incorporará antes del archivado; no cambian las muestras, las métricas ni los cinco desacuerdos sin adjudicar.
+- Próxima versión de mantenimiento: corrige la nomenclatura de la auditoría asistida, explicita la procedencia estable del diseño muestral, distingue el DOI específico del DOI conceptual y agrega un verificador público agregado para la propagación contextual. Los revisores permanecen identificados únicamente como A y B; la independencia se define por las condiciones de lectura. No cambian las muestras, las métricas ni los cinco desacuerdos sin adjudicar.
 
 - `v1.4-paper3`: incorpora la evaluación agregada del tamiz QA, el análisis de sensibilidad a reglas de equivalencia histórica y la sensibilidad a dependencia documental por folio; añade código reproducible, salidas públicas minimizadas y actualiza la auditoría de privacidad y el manifiesto SHA-256. No publica registros individuales ni discrepancias fila por fila.
 - `v1.3.1-paper3`: versión de mantenimiento; alinea los metadatos internos, `CITATION.cff`, la página pública y el manifiesto SHA-256 con la versión archivada. No modifica datos, métricas, diseño muestral ni conclusiones.
