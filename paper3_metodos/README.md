@@ -125,6 +125,8 @@ Los datos individuales, direcciones exactas, coordenadas, imágenes y discrepanc
 
 ## DOI
 
+DOI específico de `v1.4.1-paper3`: https://doi.org/10.5281/zenodo.22545822
+
 DOI conceptual: https://doi.org/10.5281/zenodo.22134990
 
 Para reproducir una instantánea exacta debe citarse el DOI específico de esa versión. El DOI conceptual identifica la familia completa y permite localizar su historial.
