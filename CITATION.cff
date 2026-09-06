@@ -1,22 +1,21 @@
 cff-version: 1.2.0
-message: "Cite the exact archived release with the version-specific DOI below; the concept DOI is retained as a related identifier for the version family."
+message: "Cite the exact version-specific DOI shown by Zenodo for v1.4.1-paper3; the related identifier below is the concept DOI for the complete version family."
 title: "Del folio a la evidencia: materiales reproducibles para la validación de registros escolares manuscritos"
 type: dataset
 authors:
   - family-names: "Perissé"
     given-names: "Alexis Marcelo"
     orcid: "https://orcid.org/0009-0007-8671-9823"
-version: "1.4"
-date-released: "2026-09-04"
+version: "1.4.1"
+date-released: "2026-09-06"
 year: 2026
-doi: "10.5281/zenodo.22321395"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.22134990"
     description: "Concept DOI for the complete version family"
 url: "https://github.com/alexisfilosofia/ens2-mariano-acosta-archivo-datos"
 repository-code: "https://github.com/alexisfilosofia/ens2-mariano-acosta-archivo-datos"
-abstract: "Public aggregate reproducibility materials for a structured transcription, contextual resolution, normalization, QA, assisted audit, and independent human validation pipeline applied to handwritten school registration records from 1910-1915."
+abstract: "Public aggregate reproducibility materials for a structured transcription, contextual resolution, normalization, QA, assisted audit, and non-prefilled double human review pipeline applied to handwritten school registration records from 1910-1915."
 keywords:
   - archival methods
   - handwritten records
