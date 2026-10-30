@@ -138,3 +138,20 @@
     padding: 44px 5vw 56px !important;
   }
 }
+
+/* Reduce el espacio superior común en las pestañas interiores. */
+.lines,
+.cooperation,
+.pathway,
+.projects {
+  padding-top: 4vw !important;
+}
+
+@media (max-width: 720px) {
+  .lines,
+  .cooperation,
+  .pathway,
+  .projects {
+    padding-top: 44px !important;
+  }
+}
