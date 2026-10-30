@@ -9,31 +9,33 @@
 }
 
 .brand img {
-  width: 56px;
-  height: auto;
-  max-height: 72px;
-  flex: 0 0 auto;
-  object-fit: contain;
-  object-position: center;
-  transform: none;
+  display: block !important;
+  width: 56px !important;
+  height: auto !important;
+  max-height: none !important;
+  flex: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
 }
 
 .brand {
-  overflow: visible;
+  overflow: visible !important;
 }
 
 .hero-mark {
-  height: auto;
-  overflow: visible;
+  width: 210px !important;
+  height: auto !important;
+  overflow: visible !important;
 }
 
 .hero-mark img {
-  display: block;
-  width: 210px;
-  height: auto;
-  max-height: none;
-  object-fit: contain;
-  object-position: center;
+  display: block !important;
+  width: 210px !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
 }
 
 /* En celulares, los accesos conservan la lectura horizontal del escritorio. */
@@ -52,14 +54,17 @@
   }
 
   .brand img {
-    width: 45px;
-    height: auto;
-    max-height: 58px;
+    width: 45px !important;
+    height: auto !important;
+  }
+
+  .hero-mark {
+    width: 150px !important;
   }
 
   .hero-mark img {
-    width: 150px;
-    height: auto;
+    width: 150px !important;
+    height: auto !important;
   }
 
   .site-header nav,
