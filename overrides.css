@@ -24,7 +24,31 @@
 }
 
 .hero-mark {
-  display: none !important;
+  position: absolute !important;
+  top: 8vw !important;
+  right: 7vw !important;
+  z-index: 0 !important;
+  display: block !important;
+  width: 220px !important;
+  height: auto !important;
+  overflow: visible !important;
+  opacity: 0.16 !important;
+  pointer-events: none !important;
+}
+
+.hero-mark img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+.hero-grid,
+.hero-bottom {
+  position: relative;
+  z-index: 1;
 }
 
 /* En celulares, los accesos conservan la lectura horizontal del escritorio. */
@@ -45,6 +69,13 @@
   .brand img {
     width: 45px !important;
     height: auto !important;
+  }
+
+  .hero-mark {
+    top: 10vw !important;
+    right: 4vw !important;
+    width: 140px !important;
+    opacity: 0.11 !important;
   }
 
   .site-header nav,
