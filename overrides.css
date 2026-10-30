@@ -9,8 +9,31 @@
 }
 
 .brand img {
+  width: 56px;
+  height: auto;
+  max-height: 72px;
+  flex: 0 0 auto;
   object-fit: contain;
+  object-position: center;
   transform: none;
+}
+
+.brand {
+  overflow: visible;
+}
+
+.hero-mark {
+  height: auto;
+  overflow: visible;
+}
+
+.hero-mark img {
+  display: block;
+  width: 210px;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
 }
 
 /* En celulares, los accesos conservan la lectura horizontal del escritorio. */
@@ -30,7 +53,13 @@
 
   .brand img {
     width: 45px;
-    height: 58px;
+    height: auto;
+    max-height: 58px;
+  }
+
+  .hero-mark img {
+    width: 150px;
+    height: auto;
   }
 
   .site-header nav,
