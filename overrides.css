@@ -119,3 +119,22 @@
     min-height: calc(100svh - 105px);
   }
 }
+
+/* La sección Programa empieza más cerca del encabezado y desplaza su bloque principal a la izquierda. */
+.statement {
+  grid-template-columns: 0.32fr 1.68fr !important;
+  padding: 4vw 5vw 6vw !important;
+  gap: 4vw !important;
+}
+
+.statement-copy {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .statement {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 44px 5vw 56px !important;
+  }
+}
