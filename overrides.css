@@ -155,3 +155,31 @@
     padding-top: 44px !important;
   }
 }
+
+@media (max-width: 720px) {
+  .statement {
+    padding-top: 84px !important;
+  }
+
+  .lines,
+  .cooperation,
+  .pathway,
+  .projects {
+    padding-top: 84px !important;
+  }
+}
+
+/* El emblema del hero debe conservar su proporción completa, sin recorte vertical. */
+.hero-mark {
+  width: 220px !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.hero-mark img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
