@@ -1,48 +1,119 @@
-/* Identidad institucional en el encabezado: aumento del 80 %. */
+/*
+  Sistema tipografico y de composicion
+  ------------------------------------
+  La caratula conserva la voz de mayor escala. Las paginas interiores usan
+  una jerarquia comun, textos de lectura mas generosos y una grilla estable.
+*/
+
+:root {
+  --content-pad: 5vw;
+  --section-y: clamp(56px, 4.6vw, 88px);
+  --display-internal: clamp(3.25rem, 4.2vw, 4.75rem);
+  --reading: clamp(1rem, 1.05vw, 1.2rem);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Encabezado: identidad visible, pero subordinada al contenido. */
+.site-header {
+  height: 86px;
+  padding-inline: var(--content-pad);
+}
+
 .brand {
-  font-size: 18px;
-  line-height: 1.1;
+  height: 86px;
+  gap: 12px;
+  overflow: visible;
+  font: 500 15px/1.08 Manrope, Arial, sans-serif;
+  letter-spacing: 0.035em;
 }
 
 .brand b {
-  font-size: 21.6px;
+  font-size: 22px;
+  letter-spacing: 0.01em;
 }
 
 .brand img {
-  display: block !important;
-  width: 56px !important;
-  height: auto !important;
-  max-height: 68px !important;
-  flex: none !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  transform: none !important;
+  display: block;
+  width: 52px;
+  height: 66px;
+  max-height: 66px;
+  flex: none;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
 }
 
-.brand {
-  overflow: visible !important;
+nav {
+  gap: clamp(14px, 1.35vw, 24px);
 }
 
+nav a {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Etiquetas y textos auxiliares compartidos. */
+.section-label,
+.status,
+.status-key {
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.section-label {
+  margin: 0;
+}
+
+/* Caratula: unica pantalla con escala monumental. */
+.hero {
+  min-height: calc(100vh - 86px);
+  padding: clamp(68px, 6.2vw, 118px) var(--content-pad) clamp(28px, 3vw, 56px);
+}
+
+.eyebrow {
+  max-width: 1450px;
+  font-size: clamp(4.25rem, 6vw, 7rem);
+  line-height: 0.94;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
+  gap: clamp(54px, 6vw, 120px);
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin-top: clamp(42px, 4vw, 72px);
+  font-size: clamp(4rem, 5.1vw, 6.2rem);
+}
+
+.hero-note {
+  max-width: 470px;
+  font-size: clamp(1rem, 1.1vw, 1.22rem);
+}
+
+/* El fondo contenido evita que cualquier regla heredada recorte el escudo. */
 .hero-mark {
-  position: absolute !important;
-  top: 8vw !important;
-  right: 7vw !important;
-  z-index: 0 !important;
-  display: block !important;
-  width: 220px !important;
-  height: auto !important;
-  overflow: visible !important;
-  opacity: 0.16 !important;
-  pointer-events: none !important;
+  position: absolute;
+  top: clamp(150px, 17vh, 220px);
+  right: clamp(54px, 7vw, 150px);
+  z-index: 0;
+  display: block;
+  width: clamp(150px, 11vw, 215px);
+  aspect-ratio: 1196 / 1315;
+  overflow: visible;
+  background: url("assets/logo-acosta-enp-1874-transparent.png") center / contain no-repeat;
+  opacity: 0.17;
+  filter: grayscale(1) brightness(2.2);
+  pointer-events: none;
 }
 
 .hero-mark img {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  object-position: center !important;
+  display: none;
 }
 
 .hero-grid,
@@ -51,31 +122,325 @@
   z-index: 1;
 }
 
-/* En celulares, los accesos conservan la lectura horizontal del escritorio. */
+/* Programa. */
+.statement {
+  grid-template-columns: minmax(190px, 0.25fr) minmax(0, 1.75fr);
+  align-items: start;
+  gap: clamp(34px, 4vw, 80px);
+  padding: var(--section-y) var(--content-pad) clamp(58px, 6vw, 110px);
+}
+
+.statement-copy {
+  width: 100%;
+  max-width: 1440px;
+  padding: clamp(44px, 4.2vw, 76px);
+}
+
+.statement h2,
+.section-heading h2,
+.participate h2 {
+  font-size: var(--display-internal);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.lead,
+.section-heading > p {
+  max-width: 760px;
+  margin-top: clamp(24px, 2.2vw, 38px);
+  font-size: var(--reading);
+  line-height: 1.68;
+}
+
+.principles {
+  margin: 0 var(--content-pad) clamp(68px, 7vw, 130px);
+}
+
+.principles article {
+  padding: 38px clamp(22px, 2.4vw, 44px) 42px 0;
+}
+
+.principles h3 {
+  margin: 20px 0 12px;
+  font-size: clamp(1.45rem, 1.7vw, 1.85rem);
+  line-height: 1.15;
+}
+
+.principles p {
+  max-width: 480px;
+  font-size: clamp(0.95rem, 0.95vw, 1.08rem);
+  line-height: 1.62;
+}
+
+/* Lineas y cooperacion comparten una grilla editorial. */
+.lines,
+.cooperation {
+  min-height: calc(100vh - 86px);
+  grid-template-columns: minmax(330px, 0.62fr) minmax(0, 1.38fr);
+  align-items: start;
+  gap: clamp(58px, 6vw, 120px);
+  padding: var(--section-y) var(--content-pad) clamp(64px, 6vw, 116px);
+}
+
+.section-heading h2 {
+  margin-top: 18px;
+}
+
+.section-heading > p {
+  font-size: clamp(1rem, 1.05vw, 1.18rem);
+}
+
+.line-list article {
+  grid-template-columns: 50px minmax(0, 1fr) 24px;
+  gap: 14px;
+  padding: clamp(21px, 1.8vw, 30px) 0;
+}
+
+.line-list h3 {
+  font-size: clamp(1.55rem, 1.8vw, 2rem);
+  line-height: 1.15;
+}
+
+.line-list p {
+  margin-top: 10px;
+  font-size: clamp(0.95rem, 1vw, 1.08rem);
+  line-height: 1.55;
+}
+
+/* Practica: la secuencia funciona como un recorrido y no como un titulo roto. */
+.pathway {
+  min-height: calc(100vh - 86px);
+  padding: var(--section-y) var(--content-pad) clamp(64px, 6vw, 112px);
+}
+
+.path {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: clamp(10px, 1.35vw, 26px);
+  margin: clamp(42px, 4vw, 72px) 0 clamp(52px, 5vw, 92px);
+  font-size: clamp(2.15rem, 3vw, 3.45rem);
+  line-height: 1.08;
+  white-space: nowrap;
+}
+
+.practice-grid {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(58px, 7vw, 140px);
+  max-width: 1500px;
+}
+
+.practice-grid p,
+.practice-note {
+  font-size: var(--reading);
+  line-height: 1.68;
+}
+
+.practice-grid li {
+  padding: 15px 0;
+  font-size: clamp(0.95rem, 0.95vw, 1.08rem);
+  line-height: 1.5;
+}
+
+.practice-note {
+  max-width: 920px;
+  margin-top: clamp(46px, 5vw, 90px);
+}
+
+/* Proyectos: encabezado y tarjetas con una escala intermedia clara. */
+.projects {
+  min-height: calc(100vh - 86px);
+  padding: var(--section-y) var(--content-pad) clamp(64px, 6vw, 112px);
+}
+
+.projects > .section-heading {
+  grid-template-columns: minmax(240px, 0.38fr) minmax(0, 0.62fr);
+  align-items: start;
+  gap: clamp(52px, 7vw, 138px);
+}
+
+.projects .section-heading h2 {
+  margin-top: 0;
+}
+
+.status-key {
+  margin: clamp(34px, 3.5vw, 58px) 0 20px;
+}
+
+.project-grid {
+  gap: clamp(14px, 1.2vw, 22px);
+}
+
+.project-card {
+  min-height: 330px;
+  padding: clamp(30px, 3vw, 50px);
+}
+
+.project-card h3 {
+  margin: clamp(30px, 3vw, 48px) 0 22px;
+  font-size: clamp(1.85rem, 2.15vw, 2.4rem);
+  line-height: 1.08;
+}
+
+.project-card > p:not(.status) {
+  max-width: 820px;
+  font-size: clamp(0.96rem, 1vw, 1.1rem);
+  line-height: 1.68;
+}
+
+.fineprint {
+  margin-top: 28px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* Cooperacion: el titular deja espacio a la informacion operativa. */
+.cooperation .section-heading h2 {
+  max-width: 560px;
+  font-size: clamp(3.25rem, 3.8vw, 4.4rem);
+}
+
+.coop-columns {
+  gap: clamp(36px, 4vw, 76px);
+  max-width: none;
+}
+
+.coop-columns article {
+  padding: 28px 0 0;
+}
+
+.coop-columns h3 {
+  margin: clamp(32px, 3vw, 50px) 0;
+  font-size: clamp(1.75rem, 2vw, 2.25rem);
+  line-height: 1.16;
+}
+
+.coop-columns li {
+  padding: 16px 0;
+  font-size: clamp(0.94rem, 0.95vw, 1.05rem);
+  line-height: 1.58;
+}
+
+/* Participar: dos columnas para aprovechar el ancho y jerarquizar la accion. */
+.participate {
+  min-height: calc(100vh - 86px - 10vw);
+  margin: 5vw;
+  padding: clamp(64px, 7vw, 124px) clamp(54px, 8vw, 150px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(460px, 1.08fr);
+  grid-template-areas:
+    "label flow"
+    "title flow"
+    "intro cta";
+  column-gap: clamp(70px, 8vw, 160px);
+  row-gap: 28px;
+  align-content: center;
+}
+
+.participate > .section-label {
+  grid-area: label;
+  align-self: end;
+}
+
+.participate h2 {
+  grid-area: title;
+  margin: 0;
+  font-size: clamp(3.4rem, 4.4vw, 4.9rem);
+}
+
+.participate > p:not(.section-label) {
+  grid-area: intro;
+  max-width: 680px;
+  margin: 0;
+  font-size: var(--reading);
+  line-height: 1.68;
+}
+
+.participation-list {
+  grid-area: flow;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  font-size: clamp(1.35rem, 1.7vw, 1.85rem);
+  line-height: 1.35;
+}
+
+.button {
+  grid-area: cta;
+  align-self: start;
+  justify-content: space-between;
+  width: min(100%, 390px);
+  padding: 17px 20px;
+  font-size: 13px;
+}
+
+/* Ajuste intermedio: evita que la cabecera y las grillas se compriman. */
+@media (max-width: 1100px) {
+  .brand {
+    font-size: 12px;
+  }
+
+  .brand b {
+    font-size: 18px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .lines,
+  .cooperation {
+    grid-template-columns: minmax(270px, 0.72fr) minmax(0, 1.28fr);
+    gap: 44px;
+  }
+
+  .path {
+    font-size: clamp(1.75rem, 3.1vw, 2.6rem);
+  }
+
+  .participate {
+    grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+    column-gap: 54px;
+  }
+}
+
+/* Celulares: cabecera legible con navegacion horizontal desplazable. */
 @media (max-width: 720px) {
+  :root {
+    --content-pad: 5vw;
+    --section-y: 48px;
+    --display-internal: clamp(2.45rem, 11vw, 3.45rem);
+    --reading: 1rem;
+  }
+
   .site-header {
     height: auto;
-    min-height: 68px;
-    padding: 0 4vw 6px;
+    min-height: 104px;
+    padding: 0 4vw 8px;
     align-items: stretch;
     flex-direction: column;
   }
 
   .brand {
-    height: 62px;
-    flex: 0 0 62px;
+    height: 64px;
+    flex: 0 0 64px;
+    font-size: 12px;
+  }
+
+  .brand b {
+    font-size: 16px;
   }
 
   .brand img {
-    width: 45px !important;
-    height: auto !important;
-  }
-
-  .hero-mark {
-    top: 10vw !important;
-    right: 4vw !important;
-    width: 140px !important;
-    opacity: 0.11 !important;
+    width: 43px;
+    height: 54px;
   }
 
   .site-header nav,
@@ -83,27 +448,30 @@
     position: static;
     display: flex;
     width: 100%;
-    padding: 0;
+    padding: 0 0 2px;
     border: 0;
     background: transparent;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 0;
+    justify-content: flex-start;
+    gap: 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .site-header nav::-webkit-scrollbar {
+    display: none;
   }
 
   .site-header nav a {
     display: block;
-    flex: 0 1 auto;
-    min-width: 0;
+    flex: none;
     min-height: 0;
     padding: 5px 0 4px;
     border: 0;
     border-bottom: 2px solid transparent;
-    font-size: clamp(7px, 2.1vw, 9px);
-    letter-spacing: -0.04em;
+    font-size: 11px;
     line-height: 1.1;
-    text-align: center;
     white-space: nowrap;
   }
 
@@ -114,86 +482,161 @@
     color: var(--blue);
   }
 
-  .hero,
+  .hero {
+    min-height: calc(100svh - 104px);
+    padding: 48px var(--content-pad) 28px;
+  }
+
+  .eyebrow {
+    max-width: 92%;
+    font-size: clamp(2.65rem, 11.5vw, 4rem);
+  }
+
+  .hero-grid,
+  .statement,
+  .lines,
+  .cooperation,
+  .practice-grid,
+  .coop-columns,
+  .projects > .section-heading {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero h1 {
+    margin-top: 32px;
+    font-size: clamp(2.35rem, 10vw, 3.5rem);
+  }
+
+  .hero-note {
+    max-width: 90%;
+    font-size: 0.98rem;
+  }
+
+  .hero-mark {
+    top: 76px;
+    right: 4vw;
+    width: 92px;
+    opacity: 0.12;
+  }
+
+  .hero-bottom {
+    margin-top: 40px;
+  }
+
+  .statement,
+  .lines,
+  .pathway,
+  .projects,
+  .cooperation {
+    padding: var(--section-y) var(--content-pad) 64px;
+  }
+
+  .statement-copy {
+    padding: 30px 24px;
+  }
+
+  .statement h2,
+  .section-heading h2,
+  .participate h2,
+  .cooperation .section-heading h2 {
+    font-size: var(--display-internal);
+  }
+
+  .lead,
+  .section-heading > p {
+    margin-top: 22px;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+    margin-bottom: 64px;
+  }
+
+  .principles article {
+    margin: 0;
+    padding: 30px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .line-list article {
+    grid-template-columns: 34px minmax(0, 1fr) 20px;
+    padding: 22px 0;
+  }
+
+  .line-list h3 {
+    font-size: 1.45rem;
+  }
+
+  .path {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px 13px;
+    margin: 36px 0 52px;
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+    white-space: normal;
+  }
+
+  .practice-grid {
+    gap: 44px;
+  }
+
+  .practice-note {
+    margin-top: 44px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 0;
+    padding: 28px 24px;
+  }
+
+  .project-card h3 {
+    margin: 30px 0 18px;
+  }
+
+  .coop-columns {
+    gap: 42px;
+  }
+
   .participate {
-    min-height: calc(100svh - 105px);
-  }
-}
-
-/* La sección Programa empieza más cerca del encabezado y desplaza su bloque principal a la izquierda. */
-.statement {
-  grid-template-columns: 0.32fr 1.68fr !important;
-  padding: 4vw 5vw 6vw !important;
-  gap: 4vw !important;
-}
-
-.statement-copy {
-  width: 100%;
-}
-
-@media (max-width: 720px) {
-  .statement {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-    padding: 44px 5vw 56px !important;
-  }
-}
-
-/* Reduce el espacio superior común en las pestañas interiores. */
-.lines,
-.cooperation,
-.pathway,
-.projects {
-  padding-top: 4vw !important;
-}
-
-@media (max-width: 720px) {
-  .lines,
-  .cooperation,
-  .pathway,
-  .projects {
-    padding-top: 44px !important;
-  }
-}
-
-@media (max-width: 720px) {
-  .statement {
-    padding-top: 84px !important;
+    min-height: calc(100svh - 104px);
+    margin: 0;
+    padding: 64px var(--content-pad);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "label"
+      "title"
+      "intro"
+      "flow"
+      "cta";
+    gap: 28px;
   }
 
-  .lines,
-  .cooperation,
-  .pathway,
-  .projects {
-    padding-top: 84px !important;
+  .participation-list {
+    margin-top: 14px;
+    font-size: 1.3rem;
   }
-}
 
-/* El emblema del hero debe conservar su proporción completa, sin recorte vertical. */
-.hero-mark {
-  width: 220px !important;
-  height: auto !important;
-  overflow: visible !important;
-}
+  .button {
+    width: 100%;
+  }
 
-.hero-mark img {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-}
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
 
-/* Sobrescribe el alto fijo de styles.css que cortaba el escudo en el hero. */
-.hero-mark img {
-  width: 220px !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: fill !important;
-}
-@media (max-width: 720px) {
-  .hero-mark img {
-    width: 140px !important;
-    height: auto !important;
+  footer p {
+    margin: 0;
+  }
+
+  footer p:last-child {
+    margin-left: 0;
   }
 }
