@@ -183,3 +183,17 @@
   max-height: none !important;
   object-fit: contain !important;
 }
+
+/* Sobrescribe el alto fijo de styles.css que cortaba el escudo en el hero. */
+.hero-mark img {
+  width: 220px !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: fill !important;
+}
+@media (max-width: 720px) {
+  .hero-mark img {
+    width: 140px !important;
+    height: auto !important;
+  }
+}
