@@ -124,9 +124,9 @@ nav a {
 
 /* Programa. */
 .statement {
-  grid-template-columns: minmax(190px, 0.25fr) minmax(0, 1.75fr);
+  grid-template-columns: minmax(150px, 0.2fr) minmax(0, 1.8fr);
   align-items: start;
-  gap: clamp(34px, 4vw, 80px);
+  gap: clamp(28px, 3vw, 52px);
   padding: var(--section-y) var(--content-pad) clamp(58px, 6vw, 110px);
 }
 
@@ -362,10 +362,17 @@ nav a {
   align-self: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 14px 18px;
   margin: 0;
   font-size: clamp(1.35rem, 1.7vw, 1.85rem);
   line-height: 1.35;
+}
+
+.participation-list > span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 18px;
+  white-space: nowrap;
 }
 
 .button {
@@ -620,6 +627,10 @@ nav a {
   .participation-list {
     margin-top: 14px;
     font-size: 1.3rem;
+  }
+
+  .participation-list > span {
+    gap: 13px;
   }
 
   .button {
