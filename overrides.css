@@ -106,7 +106,7 @@ nav a {
   width: clamp(150px, 11vw, 215px);
   aspect-ratio: 1196 / 1315;
   overflow: visible;
-  background: url("assets/logo-acosta-enp-1874-transparent.png") center / contain no-repeat;
+  background: url("assets/logo-acosta-enp-1874-transparent.png?v=2") center / contain no-repeat;
   opacity: 0.17;
   filter: grayscale(1) brightness(2.2);
   pointer-events: none;
